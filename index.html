@@ -1,0 +1,2645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>FYRO Fire Extinguisher Trading | Certified Fire Safety Since 1989</title>
+
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" href="logo.png">
+   <link rel="shortcut icon" href="logo.png">
+   <link rel="apple-touch-icon" href="logo.png">
+
+   <!-- Theme -->
+   <meta name="theme-color" content="#c41e3a">
+
+   <!-- SEO -->
+   <meta name="title" content="FYRO Fire Extinguisher Trading">
+   <meta name="description" content="Trusted fire extinguisher supplier since 1989. We provide certified fire extinguishers, refilling, maintenance, and fire safety equipment.">
+   <meta name="keywords" content="FYRO, Fire Extinguisher, Fire Safety, Fire Protection, Fire Equipment, Philippines">
+   <meta name="author" content="FYRO Fire Extinguisher Trading">
+
+   <!-- Open Graph -->
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="FYRO Fire Extinguisher Trading">
+   <meta property="og:description" content="Serving you since 1989. Certified fire extinguishers, refilling, maintenance, and complete fire safety solutions.">
+   <meta property="og:image" content="logo.png">
+   <meta property="og:url" content="https://yourdomain.com/">
+
+   <!-- Twitter / X -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="FYRO Fire Extinguisher Trading">
+   <meta name="twitter:description" content="Serving you since 1989. Certified fire safety products and services.">
+
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   <style>
+      :root {
+         --red: #c41e3a;
+         --red-deep: #8b0000;
+         --ember: #ff5a2e;
+         --ink: #15130f;
+         --charcoal: #1e1c19;
+         --steel: #4a4844;
+         --paper: #f4efe4;
+         --paper-dim: #e9e2d1;
+         --brass: #c99a3c;
+         --line: rgba(21, 19, 15, 0.12);
+      }
+
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      html {
+         scroll-behavior: smooth;
+      }
+
+      body {
+         font-family: 'Inter', sans-serif;
+         color: var(--ink);
+         line-height: 1.6;
+         overflow-x: hidden;
+         background: var(--paper);
+      }
+
+      h1, h2, h3, .display {
+         font-family: 'Oswald', sans-serif;
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+      }
+
+      .mono {
+         font-family: 'Roboto Mono', monospace;
+      }
+
+      ::selection {
+         background: var(--red);
+         color: #fff;
+      }
+
+      /* FLOATING CHAT BUTTON - LEFT SIDE */
+      .chat-button {
+         position: fixed;
+         bottom: 30px;
+         left: 30px;
+         width: 60px;
+         height: 60px;
+         background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         box-shadow: 0 8px 24px rgba(196, 30, 58, 0.4);
+         z-index: 500;
+         transition: all 0.3s ease;
+         animation: chatPulse 2s ease-in-out infinite;
+      }
+
+      .chat-button:hover {
+         transform: scale(1.12);
+         box-shadow: 0 12px 32px rgba(196, 30, 58, 0.6);
+      }
+
+      @keyframes chatPulse {
+         0%, 100% { box-shadow: 0 8px 24px rgba(196, 30, 58, 0.4); }
+         50% { box-shadow: 0 8px 32px rgba(196, 30, 58, 0.7); }
+      }
+
+      /* HAZARD DIVIDER */
+      .hazard-divider {
+         height: 14px;
+         background: repeating-linear-gradient(135deg, var(--ink) 0 18px, var(--brass) 18px 36px);
+         background-size: 200% 100%;
+         animation: hazardSlide 6s linear infinite;
+      }
+
+      @keyframes hazardSlide {
+         from { background-position: 0 0; }
+         to { background-position: -200px 0; }
+      }
+
+      /* ANNOUNCEMENT BAR */
+      .announcement-bar {
+         background: var(--ink);
+         color: #fff;
+         padding: 0.7rem 2rem;
+         text-align: center;
+         font-size: 0.85rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 0.8rem;
+         position: fixed;
+         top: 0;
+         width: 100%;
+         z-index: 1001;
+         letter-spacing: 0.3px;
+      }
+
+      .announcement-badge {
+         background: var(--red);
+         padding: 0.25rem 0.75rem;
+         border-radius: 3px;
+         font-size: 0.72rem;
+         font-weight: 700;
+         letter-spacing: 1px;
+         animation: pulseBadge 1.8s ease-in-out infinite;
+      }
+
+      @keyframes pulseBadge {
+         0%, 100% { box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.55); }
+         50% { box-shadow: 0 0 0 6px rgba(196, 30, 58, 0); }
+      }
+
+      /* NAVBAR */
+      nav {
+         background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+         padding: 0.9rem 2rem;
+         margin-top: 38px;
+         position: fixed;
+         top: 0;
+         width: 100%;
+         z-index: 1000;
+         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-container {
+         max-width: 1400px;
+         margin: 0 auto;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .logo {
+         display: flex;
+         align-items: center;
+         gap: 0.7rem;
+         font-size: 1.7rem;
+         font-weight: 700;
+         color: #fff;
+         text-decoration: none;
+         font-family: 'Oswald', sans-serif;
+         letter-spacing: 2px;
+      }
+
+      .logo i {
+         font-size: 1.9rem;
+         animation: flameFlicker 2.4s ease-in-out infinite;
+         transform-origin: bottom center;
+      }
+
+      @keyframes flameFlicker {
+         0%, 100% { transform: scale(1) rotate(0deg); }
+         25% { transform: scale(1.06, 0.96) rotate(-2deg); }
+         50% { transform: scale(0.96, 1.05) rotate(1deg); }
+         75% { transform: scale(1.03, 0.98) rotate(2deg); }
+      }
+
+      .nav-menu {
+         display: flex;
+         list-style: none;
+         gap: 2.2rem;
+         align-items: center;
+      }
+
+      .nav-menu a {
+         color: #fff;
+         text-decoration: none;
+         font-weight: 600;
+         font-size: 0.92rem;
+         letter-spacing: 0.4px;
+         position: relative;
+         padding: 0.5rem 0;
+         transition: opacity 0.3s;
+      }
+
+      .nav-menu a::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 0;
+         height: 2px;
+         background: #fff;
+         transition: width 0.3s ease;
+      }
+
+      .nav-menu a:hover::after {
+         width: 100%;
+      }
+
+      /* AUTH SECTION */
+      .auth-section {
+         display: flex;
+         align-items: center;
+         gap: 1.5rem;
+      }
+
+      .login-btn {
+         background: transparent;
+         border: 2px solid #fff;
+         color: #fff;
+         padding: 0.5rem 1.2rem;
+         border-radius: 4px;
+         font-weight: 600;
+         font-size: 0.85rem;
+         cursor: pointer;
+         transition: all 0.3s ease;
+      }
+
+      .login-btn:hover {
+         background: #fff;
+         color: var(--red);
+      }
+
+      .signup-btn {
+         background: #fff;
+         color: var(--red);
+         padding: 0.5rem 1.2rem;
+         border-radius: 4px;
+         font-weight: 700;
+         font-size: 0.85rem;
+         cursor: pointer;
+         border: none;
+         transition: all 0.3s ease;
+      }
+
+      .signup-btn:hover {
+         transform: translateY(-2px);
+         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* PROFILE DROPDOWN */
+      .profile-dropdown {
+         position: relative;
+      }
+
+      .profile-btn {
+         display: flex;
+         align-items: center;
+         gap: 0.6rem;
+         background: rgba(255, 255, 255, 0.15);
+         border: 1px solid rgba(255, 255, 255, 0.3);
+         color: #fff;
+         padding: 0.6rem 1.2rem;
+         border-radius: 25px;
+         cursor: pointer;
+         font-weight: 600;
+         font-size: 0.85rem;
+         transition: all 0.3s ease;
+      }
+
+      .profile-btn:hover {
+         background: rgba(255, 255, 255, 0.25);
+      }
+
+      .dropdown-menu {
+         position: absolute;
+         top: 45px;
+         right: 0;
+         background: #fff;
+         border-radius: 8px;
+         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+         min-width: 200px;
+         z-index: 1001;
+         overflow: hidden;
+         display: none;
+      }
+
+      .dropdown-menu.active {
+         display: block;
+      }
+
+      .dropdown-menu a,
+      .dropdown-menu button {
+         display: block;
+         width: 100%;
+         padding: 0.8rem 1.2rem;
+         border: none;
+         background: none;
+         text-align: left;
+         color: var(--ink);
+         text-decoration: none;
+         cursor: pointer;
+         font-size: 0.9rem;
+         transition: background 0.25s ease;
+      }
+
+      .dropdown-menu a:hover,
+      .dropdown-menu button:hover {
+         background: var(--paper-dim);
+      }
+
+      .dropdown-menu .divider {
+         height: 1px;
+         background: var(--line);
+      }
+
+      .mobile-menu-toggle {
+         display: none;
+         background: none;
+         border: none;
+         color: #fff;
+         font-size: 1.4rem;
+         cursor: pointer;
+      }
+
+      /* HERO */
+      .hero {
+         margin-top: 104px;
+         color: #fff;
+         padding: 7rem 2rem;
+         min-height: 560px;
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         position: relative;
+         overflow: hidden;
+         background: var(--ink);
+      }
+
+      .video-slider {
+         position: absolute;
+         inset: 0;
+         z-index: 0;
+      }
+
+      .hero-video {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         opacity: 0;
+         transition: opacity 1.2s ease-in-out;
+         z-index: 0;
+      }
+
+      .hero-video.active {
+         opacity: 1;
+         z-index: 1;
+      }
+
+      .hero::before {
+         content: '';
+         position: absolute;
+         inset: 0;
+         background: linear-gradient(120deg, rgba(196, 30, 58, 0.55) 0%, rgba(10, 9, 7, 0.75) 65%);
+         z-index: 2;
+      }
+
+      .hero::after {
+         content: '';
+         position: absolute;
+         right: -6%;
+         bottom: -20%;
+         width: 520px;
+         height: 520px;
+         border: 2px solid rgba(255, 255, 255, 0.08);
+         border-radius: 50%;
+         z-index: 2;
+         animation: gaugeSpin 40s linear infinite;
+      }
+
+      @keyframes gaugeSpin {
+         from { transform: rotate(0deg); }
+         to { transform: rotate(360deg); }
+      }
+
+      .hero-content {
+         max-width: 640px;
+         position: relative;
+         z-index: 3;
+         animation: slideInLeft 0.9s ease;
+      }
+
+      .hero-eyebrow {
+         display: inline-flex;
+         align-items: center;
+         gap: 0.6rem;
+         background: rgba(255, 255, 255, 0.12);
+         border: 1px solid rgba(255, 255, 255, 0.3);
+         padding: 0.4rem 1rem;
+         border-radius: 30px;
+         font-size: 0.78rem;
+         letter-spacing: 1.5px;
+         text-transform: uppercase;
+         margin-bottom: 1.2rem;
+         font-weight: 600;
+      }
+
+      .hero-eyebrow i {
+         color: var(--ember);
+      }
+
+      .hero-content h1 {
+         font-size: 3.4rem;
+         margin-bottom: 1.1rem;
+         font-weight: 700;
+         line-height: 1.15;
+         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-content p {
+         font-size: 1.05rem;
+         margin-bottom: 2rem;
+         color: #ece7dc;
+         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+         max-width: 520px;
+      }
+
+      .hero-cta-row {
+         display: flex;
+         gap: 1rem;
+         flex-wrap: wrap;
+      }
+
+      .btn {
+         display: inline-flex;
+         align-items: center;
+         gap: 0.5rem;
+         padding: 1rem 2.2rem;
+         background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+         color: #fff;
+         text-decoration: none;
+         border-radius: 4px;
+         font-weight: 700;
+         font-size: 0.92rem;
+         letter-spacing: 0.5px;
+         text-transform: uppercase;
+         transition: transform 0.25s ease, box-shadow 0.25s ease;
+         cursor: pointer;
+         border: none;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .btn::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+         transition: left 0.5s ease;
+      }
+
+      .btn:hover::before {
+         left: 100%;
+      }
+
+      .btn:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 10px 24px rgba(196, 30, 58, 0.45);
+      }
+
+      .btn-outline {
+         background: transparent;
+         border: 2px solid #fff;
+         color: #fff;
+         padding: 0.9rem 2.1rem;
+      }
+
+      .btn-outline:hover {
+         background: #fff;
+         color: var(--red);
+      }
+
+      .btn-secondary {
+         background: #fff;
+         color: var(--red);
+         border: none;
+      }
+
+      .btn-secondary:hover {
+         background: #f0f0f0;
+      }
+
+      /* TRUST BAR */
+      .trust-bar {
+         background: var(--paper);
+         padding: 2.6rem 2rem;
+         border-bottom: 1px solid var(--line);
+      }
+
+      .trust-container {
+         max-width: 1300px;
+         margin: 0 auto;
+         display: flex;
+         flex-wrap: wrap;
+         gap: 1.5rem;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      .trust-item {
+         display: flex;
+         align-items: center;
+         gap: 0.8rem;
+      }
+
+      .trust-icon {
+         width: 52px;
+         height: 52px;
+         border-radius: 50%;
+         background: #fff;
+         border: 2px solid var(--red);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: var(--red);
+         font-size: 1.3rem;
+         flex-shrink: 0;
+         transition: all 0.35s ease;
+      }
+
+      .trust-item:hover .trust-icon {
+         background: var(--red);
+         color: #fff;
+         transform: rotate(-8deg) scale(1.08);
+      }
+
+      .trust-text {
+         font-family: 'Oswald', sans-serif;
+         font-size: 0.85rem;
+         font-weight: 600;
+         letter-spacing: 0.5px;
+         text-transform: uppercase;
+         color: var(--ink);
+      }
+
+      .trust-sub {
+         font-size: 0.72rem;
+         color: var(--steel);
+         text-transform: none;
+         letter-spacing: 0.2px;
+      }
+
+      .gauge-badge {
+         width: 74px;
+         height: 74px;
+         position: relative;
+         flex-shrink: 0;
+      }
+
+      .gauge-badge svg {
+         width: 100%;
+         height: 100%;
+         transition: transform 0.5s ease;
+      }
+
+      .gauge-badge:hover svg {
+         transform: rotate(8deg);
+      }
+
+      .gauge-needle {
+         transform-origin: 37px 37px;
+         transition: transform 0.6s cubic-bezier(.34, 1.56, .64, 1);
+      }
+
+      .gauge-badge:hover .gauge-needle {
+         transform: rotate(140deg);
+      }
+
+      /* SECTION GENERIC */
+      .services-section, .products-section, .pricelist-section {
+         padding: 6rem 2rem;
+         max-width: 1400px;
+         margin: 0 auto;
+      }
+
+      .section-label {
+         color: var(--red);
+         font-size: 0.85rem;
+         font-weight: 700;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         margin-bottom: 0.6rem;
+      }
+
+      .section-title {
+         font-size: 2.4rem;
+         margin-bottom: 1rem;
+         color: var(--ink);
+         font-weight: 700;
+      }
+
+      .section-subtitle {
+         font-size: 1.05rem;
+         color: var(--steel);
+         margin-bottom: 3rem;
+         max-width: 640px;
+      }
+
+      .reveal {
+         opacity: 0;
+         transform: translateY(28px);
+         transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .reveal.in {
+         opacity: 1;
+         transform: translateY(0);
+      }
+
+      /* SERVICES */
+      .services-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2.2rem;
+         margin-bottom: 1rem;
+      }
+
+      .service-card {
+         background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(0, 0, 0, 0.82) 100%), center/cover no-repeat;
+         padding: 2.8rem 2rem;
+         border-radius: 6px;
+         color: #fff;
+         position: relative;
+         overflow: hidden;
+         transition: transform 0.4s ease, box-shadow 0.4s ease;
+         cursor: pointer;
+         border: 1px solid rgba(196, 30, 58, 0.35);
+         min-height: 380px;
+         display: flex;
+         flex-direction: column;
+         transform-style: preserve-3d;
+         perspective: 800px;
+      }
+
+      .service-card:nth-child(1) {
+         background-image: linear-gradient(135deg, rgba(20, 18, 15, 0.87) 0%, rgba(0, 0, 0, 0.8) 100%), url('product6.jpg');
+         background-size: cover;
+         background-position: center;
+      }
+
+      .service-card:nth-child(2) {
+         background-image: linear-gradient(135deg, rgba(20, 18, 15, 0.87) 0%, rgba(0, 0, 0, 0.8) 100%), url('maintenance.jpg');
+         background-size: cover;
+         background-position: center;
+      }
+
+      .service-card:nth-child(3) {
+         background-image: linear-gradient(135deg, rgba(20, 18, 15, 0.87) 0%, rgba(0, 0, 0, 0.8) 100%), url('training.webp');
+         background-size: cover;
+         background-position: center;
+      }
+
+      .service-card::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(135deg, rgba(196, 30, 58, 0.42), rgba(139, 0, 0, 0.42));
+         transition: left 0.35s ease;
+         z-index: 0;
+      }
+
+      .service-card:hover::before {
+         left: 0;
+      }
+
+      .service-card:hover {
+         transform: translateY(-10px) rotateX(2deg);
+         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .service-number {
+         font-family: 'Roboto Mono', monospace;
+         font-size: 3.2rem;
+         font-weight: 700;
+         color: var(--ember);
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+         position: relative;
+         z-index: 2;
+      }
+
+      .service-card:hover .service-number {
+         color: #fff;
+      }
+
+      .service-title {
+         font-size: 1.6rem;
+         font-weight: 700;
+         margin-bottom: 1rem;
+         letter-spacing: 2px;
+         position: relative;
+         z-index: 2;
+         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      }
+
+      .service-desc {
+         font-size: 0.93rem;
+         color: #ddd;
+         line-height: 1.8;
+         position: relative;
+         z-index: 2;
+         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* WHY CHOOSE */
+      .why-choose {
+         background: linear-gradient(rgba(10, 9, 7, 0.72), rgba(10, 9, 7, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop') center/cover;
+         color: #fff;
+         padding: 6rem 2rem;
+         position: relative;
+         margin: 2rem 0;
+      }
+
+      .why-choose-inner {
+         max-width: 1300px;
+         margin: 0 auto;
+         display: grid;
+         grid-template-columns: 1.1fr 0.9fr;
+         gap: 3rem;
+         align-items: center;
+      }
+
+      .why-choose-content h2 {
+         font-size: 2.4rem;
+         margin-bottom: 1.3rem;
+         font-weight: 700;
+      }
+
+      .why-choose-content p {
+         font-size: 1rem;
+         color: #ddd6c6;
+         margin-bottom: 1.8rem;
+         line-height: 1.8;
+      }
+
+      .commitment-card {
+         background: rgba(255, 255, 255, 0.06);
+         border: 1px solid rgba(255, 255, 255, 0.15);
+         border-radius: 8px;
+         padding: 2rem;
+         backdrop-filter: blur(6px);
+         transition: border-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .commitment-card:hover {
+         border-color: var(--red);
+         transform: translateY(-4px);
+      }
+
+      .commitment-card h3 {
+         font-family: 'Oswald', sans-serif;
+         font-size: 1.1rem;
+         letter-spacing: 1px;
+         margin-bottom: 0.9rem;
+         color: var(--ember);
+         text-transform: uppercase;
+      }
+
+      .commitment-list {
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         gap: 0.7rem;
+         font-size: 0.92rem;
+         color: #e6e1d3;
+      }
+
+      .commitment-list li {
+         display: flex;
+         align-items: flex-start;
+         gap: 0.6rem;
+      }
+
+      .commitment-list i {
+         color: var(--red);
+         margin-top: 3px;
+      }
+
+      /* PRICE LIST SECTION */
+      .pricelist-section {
+         position: relative;
+      }
+
+      .pricelist-wrap {
+         background: #fff;
+         border-radius: 10px;
+         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+         overflow: hidden;
+         border: 1px solid var(--line);
+      }
+
+      .pricelist-head {
+         background: linear-gradient(135deg, var(--ink) 0%, #2a2620 100%);
+         color: #fff;
+         padding: 1.6rem 2rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 1rem;
+      }
+
+      .pricelist-head h3 {
+         font-size: 1.3rem;
+         letter-spacing: 1.5px;
+      }
+
+      .pricelist-head span {
+         font-size: 0.8rem;
+         color: #c9c2ac;
+         font-family: 'Roboto Mono', monospace;
+      }
+
+      table.price-table {
+         width: 100%;
+         border-collapse: collapse;
+      }
+
+      .price-table thead th {
+         background: var(--ink);
+         color: #fff;
+         text-align: left;
+         padding: 1rem 1.4rem;
+         font-family: 'Oswald', sans-serif;
+         font-size: 0.82rem;
+         letter-spacing: 1.5px;
+         text-transform: uppercase;
+      }
+
+      .price-table thead th:not(:first-child) {
+         text-align: center;
+      }
+
+      .price-table tbody td {
+         padding: 1.3rem 1.4rem;
+         border-bottom: 1px solid var(--line);
+         font-size: 0.98rem;
+      }
+
+      .price-table tbody td:not(:first-child) {
+         text-align: center;
+      }
+
+      .price-row {
+         transition: background 0.25s ease;
+      }
+
+      .price-row:hover {
+         background: #fff7f0;
+      }
+
+      .price-row td:first-child {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         font-weight: 700;
+         font-family: 'Oswald', sans-serif;
+         letter-spacing: 0.5px;
+      }
+
+      .price-icon {
+         width: 44px;
+         height: 44px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: #fff;
+         font-size: 1.1rem;
+         flex-shrink: 0;
+      }
+
+      .price-icon.dry {
+         background: var(--red);
+      }
+
+      .price-icon.hcfc {
+         background: #1f7a4d;
+      }
+
+      .price-size {
+         color: var(--steel);
+         font-weight: 400;
+         font-size: 0.85rem;
+         display: block;
+      }
+
+      .price-refill {
+         font-family: 'Roboto Mono', monospace;
+         font-weight: 700;
+         color: var(--steel);
+         font-size: 1.05rem;
+      }
+
+      .price-new {
+         font-family: 'Roboto Mono', monospace;
+         font-weight: 800;
+         color: var(--red);
+         font-size: 1.2rem;
+      }
+
+      .price-table tbody tr:last-child td {
+         border-bottom: none;
+      }
+
+      .pricelist-note {
+         margin: 0;
+         padding: 1.6rem 2rem;
+         background: var(--paper-dim);
+         display: flex;
+         gap: 1rem;
+         align-items: flex-start;
+         border-top: 2px dashed var(--red);
+      }
+
+      .pricelist-note i {
+         color: var(--red);
+         font-size: 1.2rem;
+         margin-top: 2px;
+      }
+
+      .pricelist-note .note-body {
+         font-size: 0.9rem;
+         color: var(--steel);
+      }
+
+      .pricelist-note strong {
+         color: var(--ink);
+      }
+
+      .pricelist-note ul {
+         margin: 0.5rem 0 0 1.1rem;
+      }
+
+      .pricelist-note .delivery-line {
+         margin-top: 0.7rem;
+         font-weight: 600;
+         color: var(--ink);
+      }
+
+      .pricelist-note .delivery-line i {
+         margin-right: 0.4rem;
+      }
+
+      .pricelist-footer-strip {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         gap: 1rem;
+         padding: 1.3rem 2rem;
+         background: var(--ink);
+         color: #cfc9b8;
+         font-size: 0.85rem;
+      }
+
+      .pricelist-footer-strip a {
+         color: #fff;
+         text-decoration: none;
+         font-weight: 600;
+      }
+
+      .pricelist-footer-strip a:hover {
+         color: var(--ember);
+      }
+
+      /* PRODUCTS */
+      .filter-buttons {
+         display: flex;
+         gap: 1rem;
+         margin-bottom: 2.6rem;
+         flex-wrap: wrap;
+      }
+
+      .filter-btn {
+         background: #efe8d8;
+         border: 2px solid transparent;
+         padding: 0.65rem 1.4rem;
+         border-radius: 25px;
+         cursor: pointer;
+         font-weight: 700;
+         font-size: 0.85rem;
+         letter-spacing: 0.4px;
+         transition: all 0.3s ease;
+         color: var(--ink);
+         text-transform: uppercase;
+      }
+
+      .filter-btn.active {
+         background: var(--red);
+         color: #fff;
+         border-color: var(--red);
+      }
+
+      .filter-btn:hover {
+         border-color: var(--red);
+         transform: translateY(-2px);
+      }
+
+      .products-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+         gap: 2.2rem;
+         margin-bottom: 2.6rem;
+      }
+
+      .product-card {
+         background: #fff;
+         border-radius: 8px;
+         overflow: hidden;
+         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+         transition: transform 0.15s ease, box-shadow 0.35s ease;
+         position: relative;
+         border: 1px solid var(--line);
+      }
+
+      .product-card:hover {
+         box-shadow: 0 18px 36px rgba(196, 30, 58, 0.22);
+      }
+
+      .product-image {
+         width: 100%;
+         height: 230px;
+         background: linear-gradient(135deg, #efe8d8, #e3dac4);
+         position: relative;
+         overflow: hidden;
+      }
+
+      .product-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: transform 0.4s ease;
+      }
+
+      .product-card:hover .product-image img {
+         transform: scale(1.1);
+      }
+
+      .product-badge {
+         position: absolute;
+         top: 12px;
+         right: 12px;
+         background: var(--red);
+         color: #fff;
+         padding: 0.4rem 0.9rem;
+         border-radius: 4px;
+         font-weight: 700;
+         font-size: 0.72rem;
+         letter-spacing: 0.5px;
+         text-transform: uppercase;
+      }
+
+      .product-info {
+         padding: 1.4rem;
+      }
+
+      .product-name {
+         font-family: 'Oswald', sans-serif;
+         font-size: 1.05rem;
+         font-weight: 600;
+         margin-bottom: 0.5rem;
+         color: var(--ink);
+         letter-spacing: 0.3px;
+      }
+
+      .product-price {
+         display: flex;
+         gap: 1rem;
+         align-items: center;
+         margin-bottom: 0.9rem;
+      }
+
+      .price-current {
+         font-family: 'Roboto Mono', monospace;
+         font-size: 1.25rem;
+         font-weight: 700;
+         color: var(--red);
+      }
+
+      .price-original {
+         font-size: 0.85rem;
+         color: #999;
+         text-decoration: line-through;
+         font-family: 'Roboto Mono', monospace;
+      }
+
+      .product-desc {
+         font-size: 0.88rem;
+         color: var(--steel);
+         margin-bottom: 1.3rem;
+      }
+
+      .product-actions {
+         display: flex;
+         gap: 0.8rem;
+      }
+
+      .product-actions button {
+         flex: 1;
+         padding: 0.75rem;
+         border: 2px solid var(--red);
+         background: #fff;
+         color: var(--red);
+         font-weight: 700;
+         font-size: 0.82rem;
+         letter-spacing: 0.3px;
+         text-transform: uppercase;
+         cursor: pointer;
+         border-radius: 4px;
+         transition: all 0.3s ease;
+      }
+
+      .product-actions button:hover {
+         background: var(--red);
+         color: #fff;
+      }
+
+      .product-actions button:last-child {
+         flex: 0.5;
+      }
+
+      .view-all-btn {
+         display: block;
+         width: 220px;
+         margin: 1rem auto 0;
+         text-align: center;
+      }
+
+      /* TESTIMONIALS */
+      .testimonials-section {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 3rem;
+         padding: 6rem 2rem;
+         max-width: 1400px;
+         margin: 0 auto;
+         align-items: center;
+      }
+
+      .testimonial-image {
+         width: 100%;
+         height: 400px;
+         background: linear-gradient(135deg, var(--red), var(--red-deep));
+         border-radius: 8px;
+         overflow: hidden;
+         position: relative;
+      }
+
+      .testimonial-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: transform 0.6s ease;
+      }
+
+      .testimonial-image:hover img {
+         transform: scale(1.06);
+      }
+
+      .testimonial-content h2 {
+         font-size: 2.2rem;
+         margin-bottom: 1.3rem;
+         color: var(--ink);
+         font-weight: 700;
+      }
+
+      .testimonial-text {
+         font-size: 1rem;
+         color: var(--steel);
+         line-height: 1.8;
+         margin-bottom: 1.6rem;
+         font-style: italic;
+      }
+
+      .testimonial-author {
+         font-weight: 700;
+         color: var(--ink);
+         margin-bottom: 0.2rem;
+         font-family: 'Oswald', sans-serif;
+      }
+
+      .testimonial-role {
+         font-size: 0.88rem;
+         color: var(--red);
+      }
+
+      /* REP SECTION */
+      .rep-section {
+         background: var(--paper-dim);
+         padding: 5rem 2rem;
+      }
+
+      .rep-card {
+         max-width: 1100px;
+         margin: 0 auto;
+         background: #fff;
+         border-radius: 10px;
+         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+         overflow: hidden;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         border: 1px solid var(--line);
+      }
+
+      .rep-left {
+         padding: 3rem;
+         background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+         color: #fff;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .rep-left::after {
+         content: '';
+         position: absolute;
+         right: -40px;
+         bottom: -40px;
+         width: 180px;
+         height: 180px;
+         border: 2px solid rgba(255, 255, 255, 0.15);
+         border-radius: 50%;
+      }
+
+      .rep-left h3 {
+         font-size: 1.6rem;
+         margin-bottom: 0.3rem;
+      }
+
+      .rep-left .rep-role {
+         font-size: 0.85rem;
+         color: #ffd9d9;
+         margin-bottom: 1.8rem;
+         letter-spacing: 0.4px;
+      }
+
+      .rep-contact-item {
+         display: flex;
+         align-items: center;
+         gap: 0.8rem;
+         margin-bottom: 1rem;
+         font-size: 0.93rem;
+      }
+
+      .rep-contact-item i {
+         width: 36px;
+         height: 36px;
+         background: rgba(255, 255, 255, 0.18);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         transition: transform 0.3s ease;
+      }
+
+      .rep-contact-item:hover i {
+         transform: scale(1.12) rotate(-6deg);
+         background: rgba(255, 255, 255, 0.3);
+      }
+
+      .rep-right {
+         padding: 3rem;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 1rem;
+      }
+
+      .rep-right h4 {
+         font-family: 'Oswald', sans-serif;
+         font-size: 1.1rem;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         color: var(--ink);
+         margin-bottom: 0.5rem;
+      }
+
+      .rep-right p {
+         color: var(--steel);
+         font-size: 0.95rem;
+         margin-bottom: 1rem;
+      }
+
+      /* NEWSLETTER */
+      .newsletter-section {
+         background: linear-gradient(135deg, var(--ink) 0%, #2a2620 100%);
+         color: #fff;
+         padding: 4rem 2rem;
+         text-align: center;
+      }
+
+      .newsletter-container {
+         max-width: 600px;
+         margin: 0 auto;
+      }
+
+      .newsletter-section h2 {
+         font-size: 2.1rem;
+         margin-bottom: 1rem;
+         font-weight: 700;
+      }
+
+      .newsletter-section p {
+         font-size: 1rem;
+         color: #ddd;
+         margin-bottom: 2rem;
+      }
+
+      .newsletter-form {
+         display: flex;
+         gap: 0.5rem;
+         margin-bottom: 1rem;
+      }
+
+      .newsletter-form input {
+         flex: 1;
+         padding: 1rem;
+         border: none;
+         border-radius: 4px;
+         font-size: 1rem;
+      }
+
+      .newsletter-form button {
+         padding: 1rem 2rem;
+         background: var(--red);
+         color: #fff;
+         border: none;
+         border-radius: 4px;
+         font-weight: 700;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         text-transform: uppercase;
+         font-size: 0.85rem;
+         letter-spacing: 0.5px;
+      }
+
+      .newsletter-form button:hover {
+         background: var(--red-deep);
+         transform: translateY(-2px);
+      }
+
+      /* FOOTER */
+      footer {
+         background: var(--ink);
+         color: #cfc9b8;
+         padding: 3rem 2rem 1rem;
+      }
+
+      .footer-content {
+         max-width: 1400px;
+         margin: 0 auto;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 2rem;
+         margin-bottom: 2rem;
+      }
+
+      .footer-section h3 {
+         color: #fff;
+         margin-bottom: 1rem;
+         font-weight: 700;
+         font-family: 'Oswald', sans-serif;
+         letter-spacing: 1px;
+      }
+
+      .footer-section ul {
+         list-style: none;
+      }
+
+      .footer-section ul li {
+         margin-bottom: 0.75rem;
+         font-size: 0.92rem;
+      }
+
+      .footer-section a {
+         color: #cfc9b8;
+         text-decoration: none;
+         transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+         color: var(--ember);
+      }
+
+      .social-links {
+         display: flex;
+         gap: 1.2rem;
+         margin-top: 1rem;
+      }
+
+      .social-links a {
+         width: 38px;
+         height: 38px;
+         background: rgba(196, 30, 58, 0.2);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+         background: var(--red);
+         transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+         border-top: 1px solid #3a352c;
+         padding-top: 1.6rem;
+         text-align: center;
+         font-size: 0.85rem;
+      }
+
+      /* ANIMATIONS */
+      @keyframes slideInLeft {
+         from {
+            opacity: 0;
+            transform: translateX(-50px);
+         }
+         to {
+            opacity: 1;
+            transform: translateX(0);
+         }
+      }
+
+      @keyframes fadeInUp {
+         from {
+            opacity: 0;
+            transform: translateY(30px);
+         }
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      @keyframes fadeIn {
+         from { opacity: 0; }
+         to { opacity: 1; }
+      }
+
+      @keyframes fadeOut {
+         from { opacity: 1; }
+         to { opacity: 0; }
+      }
+
+      @keyframes slideInUp {
+         from {
+            opacity: 0;
+            transform: translateY(40px);
+         }
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      /* MODALS */
+      .modal {
+         display: none;
+         position: fixed;
+         z-index: 2000;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.65);
+         animation: fadeIn 0.3s ease;
+         overflow-y: auto;
+      }
+
+      .modal-content {
+         background-color: #fff;
+         margin: 5% auto;
+         padding: 2rem;
+         border-radius: 8px;
+         width: 90%;
+         max-width: 500px;
+         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+         animation: slideInUp 0.35s ease;
+      }
+
+      .modal-content.large {
+         max-width: 700px;
+      }
+
+      .close {
+         color: #aaa;
+         float: right;
+         font-size: 1.8rem;
+         font-weight: bold;
+         cursor: pointer;
+         transition: color 0.3s ease;
+      }
+
+      .close:hover {
+         color: var(--red);
+      }
+
+      .modal-content h2 {
+         color: var(--ink);
+         margin-bottom: 1.5rem;
+         font-family: 'Oswald', sans-serif;
+      }
+
+      .modal-form {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+      }
+
+      .form-group {
+         display: flex;
+         flex-direction: column;
+         gap: 0.4rem;
+      }
+
+      .form-group label {
+         font-weight: 600;
+         font-size: 0.9rem;
+         color: var(--ink);
+      }
+
+      .modal-form input,
+      .modal-form textarea,
+      .modal-form select {
+         padding: 0.8rem;
+         border: 1px solid #ddd;
+         border-radius: 4px;
+         font-size: 1rem;
+         font-family: inherit;
+      }
+
+      .modal-form input:focus,
+      .modal-form textarea:focus,
+      .modal-form select:focus {
+         outline: none;
+         border-color: var(--red);
+         box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+      }
+
+      .modal-form textarea {
+         resize: vertical;
+         min-height: 100px;
+      }
+
+      .form-row {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 1rem;
+      }
+
+      .order-summary {
+         background: var(--paper-dim);
+         padding: 1.5rem;
+         border-radius: 6px;
+         margin-bottom: 1.5rem;
+      }
+
+      .order-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 0.8rem;
+         padding-bottom: 0.8rem;
+         border-bottom: 1px solid var(--line);
+      }
+
+      .order-item:last-child {
+         border-bottom: none;
+         margin-bottom: 0;
+         padding-bottom: 0;
+      }
+
+      .order-total {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 1rem;
+         padding-top: 1rem;
+         border-top: 2px solid var(--red);
+         font-weight: 700;
+         font-size: 1.1rem;
+         color: var(--red);
+      }
+
+      .tabs {
+         display: flex;
+         gap: 0.5rem;
+         margin-bottom: 1.5rem;
+         border-bottom: 2px solid var(--line);
+      }
+
+      .tab {
+         padding: 0.8rem 1.2rem;
+         background: none;
+         border: none;
+         cursor: pointer;
+         font-weight: 600;
+         color: var(--steel);
+         border-bottom: 3px solid transparent;
+         transition: all 0.3s ease;
+         font-size: 0.95rem;
+      }
+
+      .tab.active {
+         color: var(--red);
+         border-bottom-color: var(--red);
+      }
+
+      .tab-content {
+         display: none;
+      }
+
+      .tab-content.active {
+         display: block;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width:900px) {
+         .why-choose-inner {
+            grid-template-columns: 1fr;
+         }
+
+         .rep-card {
+            grid-template-columns: 1fr;
+         }
+
+         .price-table thead th:nth-child(2),
+         .price-table tbody td:nth-child(2) {
+            display: none;
+         }
+
+         .testimonials-section {
+            grid-template-columns: 1fr;
+         }
+      }
+
+      @media (max-width:768px) {
+         .announcement-bar {
+            flex-direction: column;
+            gap: 0.4rem;
+            padding: 0.5rem;
+         }
+
+         nav {
+            margin-top: 74px;
+            padding: 1rem;
+         }
+
+         .navbar-container {
+            justify-content: space-between;
+         }
+
+         .nav-menu {
+            position: absolute;
+            top: 66px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            background: var(--red);
+            gap: 0;
+            display: none;
+            z-index: 999;
+         }
+
+         .nav-menu.active {
+            display: flex;
+         }
+
+         .nav-menu a {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+         }
+
+         .mobile-menu-toggle {
+            display: block;
+         }
+
+         .hero {
+            margin-top: 118px;
+            padding: 3.5rem 1.2rem;
+            min-height: 420px;
+         }
+
+         .hero-content {
+            max-width: 100%;
+         }
+
+         .hero-content h1 {
+            font-size: 2.1rem;
+         }
+
+         .hero-content p {
+            font-size: 0.95rem;
+         }
+
+         .section-title {
+            font-size: 1.8rem;
+         }
+
+         .services-grid {
+            grid-template-columns: 1fr;
+         }
+
+         .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+         }
+
+         .trust-container {
+            justify-content: center;
+            text-align: center;
+         }
+
+         .price-table thead th,
+         .price-table tbody td {
+            padding: 0.9rem;
+         }
+
+         .form-row {
+            grid-template-columns: 1fr;
+         }
+
+         .chat-button {
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- CHAT BUTTON (LEFT SIDE) -->
+   <button class="chat-button" onclick="openChatModal()" title="Chat with us">
+      <i class="fas fa-comments"></i>
+   </button>
+
+   <!-- ANNOUNCEMENT BAR -->
+   <div class="announcement-bar">
+      <span class="announcement-badge">🔔 URGENT</span>
+      <span>Fire Safety is Our Priority | Get Your Extinguisher Checked Today</span>
+   </div>
+
+   <!-- NAVBAR -->
+   <nav>
+      <div class="navbar-container">
+         <a href="#" class="logo">
+            <i class="fas fa-fire"></i>
+            <span>FYRO</span>
+         </a>
+         <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricelist">Price List</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+         <div class="auth-section">
+            <div id="guestAuth" class="auth-section">
+               <button class="login-btn" onclick="openLoginModal()">Login</button>
+               <button class="signup-btn" onclick="openSignupModal()">Sign Up</button>
+            </div>
+            <div id="userProfile" class="profile-dropdown" style="display:none;">
+               <button class="profile-btn" onclick="toggleDropdown()">
+                  <i class="fas fa-user-circle"></i>
+                  <span id="userName">User</span>
+                  <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i>
+               </button>
+               <div class="dropdown-menu" id="dropdownMenu">
+                  <a href="#" onclick="viewProfile()"><i class="fas fa-user"></i> My Profile</a>
+                  <a href="#" onclick="viewOrders()"><i class="fas fa-history"></i> My Orders</a>
+                  <div class="divider"></div>
+                  <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+               </div>
+            </div>
+         </div>
+         <button class="mobile-menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+      </div>
+   </nav>
+
+   <!-- HERO -->
+   <section class="hero" id="home">
+      <div class="video-slider">
+         <video class="hero-video active" muted playsinline preload="metadata">
+            <source src="hero2.mp4" type="video/mp4">
+         </video>
+         <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="hero.mp4" type="video/mp4">
+         </video>
+         <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="hero1.mp4" type="video/mp4">
+         </video>
+      </div>
+
+      <div class="hero-content">
+         <div class="hero-eyebrow"><i class="fas fa-certificate"></i> BPS Certified &middot; Made in the Philippines</div>
+         <h1>Serving you since 1989.</h1>
+         <p>FYRO Fire Extinguisher Trading is your trusted partner in fire safety solutions. We provide the highest quality fire protection equipment at competitive prices, backed by reliable refill and maintenance service.</p>
+         <div class="hero-cta-row">
+            <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+               <i class="fas fa-shopping-bag"></i> Shop Products
+            </button>
+            <button class="btn btn-outline" onclick="document.getElementById('pricelist').scrollIntoView({behavior:'smooth'})">
+               <i class="fas fa-tags"></i> View Price List
+            </button>
+         </div>
+      </div>
+   </section>
+
+   <!-- TRUST BAR -->
+   <div class="trust-bar reveal">
+      <div class="trust-container">
+         <div class="trust-item">
+            <div class="gauge-badge">
+               <svg viewBox="0 0 74 74">
+                  <circle cx="37" cy="37" r="34" fill="none" stroke="#1e1c19" stroke-width="2" />
+                  <circle cx="37" cy="37" r="27" fill="none" stroke="#c41e3a" stroke-width="1.4" stroke-dasharray="3 4" />
+                  <text x="37" y="34" text-anchor="middle" font-size="9" font-weight="700" fill="#1e1c19" font-family="Oswald,sans-serif">BPS</text>
+                  <text x="37" y="45" text-anchor="middle" font-size="6" fill="#4a4844" font-family="Inter,sans-serif">CERTIFIED</text>
+                  <line class="gauge-needle" x1="37" y1="37" x2="37" y2="16" stroke="#c41e3a" stroke-width="2.4" stroke-linecap="round" />
+                  <circle cx="37" cy="37" r="3" fill="#c41e3a" />
+               </svg>
+            </div>
+            <div>
+               <div class="trust-text">BPS Certified</div>
+               <div class="trust-sub">Product Quality Guaranteed</div>
+            </div>
+         </div>
+         <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-shield-halved"></i></div>
+            <div>
+               <div class="trust-text">Quality Products</div>
+               <div class="trust-sub">Tested &amp; certified stock</div>
+            </div>
+         </div>
+         <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-shield"></i></div>
+            <div>
+               <div class="trust-text">Reliable Protection</div>
+               <div class="trust-sub">Ready when it matters</div>
+            </div>
+         </div>
+         <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-people-group"></i></div>
+            <div>
+               <div class="trust-text">Competitive Prices</div>
+               <div class="trust-sub">Refill &amp; brand-new options</div>
+            </div>
+         </div>
+         <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-award"></i></div>
+            <div>
+               <div class="trust-text">Trusted Service</div>
+               <div class="trust-sub">Since 1989</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="hazard-divider"></div>
+
+   <!-- SERVICES SECTION -->
+   <section class="services-section" id="services">
+      <div class="section-label reveal">Ways to Support</div>
+      <h2 class="section-title reveal">Support FYRO &amp; Fire Safety.</h2>
+      <p class="section-subtitle reveal">Choose from our comprehensive range of services designed to keep your family and business safe from fire hazards.</p>
+
+      <div class="services-grid">
+         <div class="service-card reveal">
+            <div class="service-number">01</div>
+            <div class="service-title">SHOP PRODUCTS</div>
+            <p class="service-desc">Browse our full collection of certified fire extinguishers, fire safety equipment, and emergency supplies. All products are tested for quality and reliability.</p>
+         </div>
+         <div class="service-card reveal">
+            <div class="service-number">02</div>
+            <div class="service-title">MAINTENANCE</div>
+            <p class="service-desc">Professional inspection, refilling, and maintenance services to ensure your fire extinguishers are always ready. Annual certification included.</p>
+         </div>
+         <div class="service-card reveal">
+            <div class="service-number">03</div>
+            <div class="service-title">TRAINING</div>
+            <p class="service-desc">Comprehensive fire safety training programs for businesses and individuals. Learn proper usage and emergency response procedures from certified professionals.</p>
+         </div>
+      </div>
+   </section>
+
+   <!-- WHY CHOOSE US -->
+   <section class="why-choose" id="about">
+      <div class="why-choose-inner">
+         <div class="why-choose-content reveal">
+            <h2>Why Choose FYRO for Fire Protection?</h2>
+            <p>With over 30 years of experience, FYRO has been the trusted name in fire safety. We're committed to protecting lives and property with certified, reliable fire extinguishing solutions. Our expert team ensures every product meets the highest standards for safety and performance.</p>
+            <button class="btn btn-outline" onclick="openChatModal()">Get in Touch</button>
+         </div>
+         <div class="commitment-card reveal">
+            <h3><i class="fas fa-handshake"></i> Our Commitment</h3>
+            <ul class="commitment-list">
+               <li><i class="fas fa-check"></i> Providing quality fire safety equipment at competitive and reasonable prices, ensuring our partners with reliable standards and performance.</li>
+               <li><i class="fas fa-check"></i> Supporting establishments in maintaining a safe and protected environment.</li>
+               <li><i class="fas fa-check"></i> Quality products. Reliable protection. Your safety, our priority.</li>
+            </ul>
+         </div>
+      </div>
+   </section>
+
+   <!-- PRICE LIST SECTION -->
+   <section class="pricelist-section" id="pricelist">
+      <div class="section-label reveal">Standard Price List</div>
+      <h2 class="section-title reveal">Reliable Fire Protection Solutions.</h2>
+      <p class="section-subtitle reveal">FYRO Fire Extinguisher Trading is committed to providing high quality fire safety equipment at competitive and reasonable prices.</p>
+
+      <div class="pricelist-wrap reveal">
+         <div class="pricelist-head">
+            <h3>Price List</h3>
+            <span class="mono">UPDATED 2026</span>
+         </div>
+         <table class="price-table">
+            <thead>
+               <tr>
+                  <th>Type</th>
+                  <th>Size</th>
+                  <th>Refill</th>
+                  <th>Brand New</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr class="price-row">
+                  <td>
+                     <span class="price-icon dry"><i class="fas fa-fire-extinguisher"></i></span>
+                     <span>Dry Chemical<span class="price-size">Powder-based ABC extinguisher</span></span>
+                  </td>
+                  <td>10 LBS</td>
+                  <td><span class="price-refill">₱1,000</span></td>
+                  <td><span class="price-new">₱2,300</span></td>
+               </tr>
+               <tr class="price-row">
+                  <td>
+                     <span class="price-icon hcfc"><i class="fas fa-fire-extinguisher"></i></span>
+                     <span>Fire Extinguisher (HCFC)<span class="price-size">Clean-agent extinguisher</span></span>
+                  </td>
+                  <td>10 LBS</td>
+                  <td><span class="price-refill">₱4,200</span></td>
+                  <td><span class="price-new">₱6,150</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <div class="pricelist-note">
+            <i class="fas fa-circle-info"></i>
+            <div class="note-body">
+               <strong>Note:</strong> Free delivery within Iligan City. For orders 10 pcs and below, small upcharges apply. Subject to terms and conditions.
+               <div class="delivery-line"><i class="fas fa-truck-fast"></i> Fast delivery available</div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <div class="hazard-divider"></div>
+
+   <!-- PRODUCTS SECTION -->
+   <section class="products-section" id="products">
+      <div class="section-label reveal">Shop Products</div>
+      <h2 class="section-title reveal">Our Complete Collection.</h2>
+
+      <div class="filter-buttons reveal">
+         <button class="filter-btn active" onclick="filterProducts('all', this)">All Products</button>
+         <button class="filter-btn" onclick="filterProducts('dry-chemical', this)">Dry Chemical</button>
+         <button class="filter-btn" onclick="filterProducts('fire-extinguisher', this)">Fire Extinguishers</button>
+         <button class="filter-btn" onclick="filterProducts('accessories', this)">Accessories</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+
+      <button class="btn view-all-btn">View All Products</button>
+   </section>
+
+   <!-- TESTIMONIALS -->
+   <section class="testimonials-section">
+      <div class="testimonial-image reveal"><img src="image1.jpg" alt="Satisfied Customer"></div>
+      <div class="testimonial-content reveal">
+         <h2>Why Our Customers Trust Us</h2>
+         <p class="testimonial-text">"FYRO has been our go-to fire safety provider for years. Their products are reliable, their team is professional, and their customer service is outstanding. We trust them to keep our facilities safe."</p>
+         <p class="testimonial-author">Juan Santos</p>
+         <p class="testimonial-role">Facility Manager - Manila Enterprises</p>
+         <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+            <button class="btn" onclick="openChatModal()">Contact Us</button>
+            <button class="btn btn-outline" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" style="border-color:#c41e3a;color:#c41e3a;">Shop Now</button>
+         </div>
+      </div>
+   </section>
+
+   <!-- AUTHORIZED SALES REPRESENTATIVE -->
+   <section class="rep-section" id="contact">
+      <div class="rep-card reveal">
+         <div class="rep-left">
+            <h3>Pilipinas A. Quiban</h3>
+            <div class="rep-role">Authorized Sales Representative, FYRO Fire Extinguisher Trading</div>
+            <div class="rep-contact-item"><i class="fas fa-phone"></i> 09758043935 / 09392400052</div>
+            <div class="rep-contact-item"><i class="fas fa-comment-dots"></i> Pinas Ancing</div>
+            <div class="rep-contact-item"><i class="fas fa-envelope"></i> pilipinasquiban@spc.edu.ph</div>
+            <div class="rep-contact-item"><i class="fas fa-location-dot"></i> Boathouse District, Iligan City</div>
+         </div>
+         <div class="rep-right">
+            <h4>Respectfully Yours</h4>
+            <p>Please find our standard price list above for your kind review and evaluation. For any inquiries or further details, please do not hesitate to contact us.</p>
+            <p>We are very much willing to assist you further. Thank you for your time and consideration.</p>
+            <button class="btn" style="align-self:flex-start;" onclick="openChatModal()"><i class="fas fa-paper-plane"></i> Send an Inquiry</button>
+         </div>
+      </div>
+   </section>
+
+   <!-- NEWSLETTER -->
+   <section class="newsletter-section">
+      <div class="newsletter-container">
+         <h2>Stay Updated on Fire Safety</h2>
+         <p>Subscribe to our newsletter for tips, updates, and exclusive offers on fire safety products.</p>
+         <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button>Subscribe Now</button>
+         </div>
+      </div>
+   </section>
+
+   <!-- FOOTER -->
+   <footer>
+      <div class="footer-content">
+         <div class="footer-section">
+            <h3>FYRO</h3>
+            <p>Your trusted partner in fire safety since 1989. Dedicated to protecting lives and property.</p>
+            <div class="social-links">
+               <a href="#"><i class="fab fa-facebook"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+         </div>
+         <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#services">Services</a></li>
+               <li><a href="#pricelist">Price List</a></li>
+               <li><a href="#products">Products</a></li>
+               <li><a href="#about">About Us</a></li>
+            </ul>
+         </div>
+         <div class="footer-section">
+            <h3>Contact Info</h3>
+            <ul>
+               <li><a href="tel:+639758043935">(+63) 975-804-3935</a></li>
+               <li><a href="tel:+639392400052">(+63) 939-240-0052</a></li>
+               <li><a href="mailto:pilipinasquiban@spc.edu.ph">pilipinasquiban@spc.edu.ph</a></li>
+               <li>Boathouse District, Iligan City</li>
+               <li>🇵🇭 Made in the Philippines &middot; BPS Certified</li>
+            </ul>
+         </div>
+         <div class="footer-section">
+            <h3>Business Hours</h3>
+            <ul>
+               <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+               <li>Saturday: 9:00 AM - 4:00 PM</li>
+               <li>Sunday: CLOSED</li>
+               <li style="margin-top:1rem;padding-top:1rem;border-top:1px solid #3a352c;"><strong>24/7 Emergency Service Available</strong></li>
+            </ul>
+         </div>
+      </div>
+      <div class="footer-bottom">
+         <p>&copy; 2026 FYRO Fire Extinguisher Trading. All rights reserved. | Made in the Philippines with ❤️</p>
+      </div>
+   </footer>
+
+   <!-- LOGIN MODAL -->
+   <div id="loginModal" class="modal">
+      <div class="modal-content">
+         <span class="close" onclick="closeLoginModal()">&times;</span>
+         <h2>Welcome Back</h2>
+         <form class="modal-form" onsubmit="handleLogin(event)">
+            <div class="form-group">
+               <label>Email</label>
+               <input type="email" id="loginEmail" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+               <label>Password</label>
+               <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn" style="width:100%;">Login</button>
+         </form>
+         <p style="text-align:center;margin-top:1rem;font-size:0.9rem;">
+            Don't have an account? <a href="#" onclick="closeLoginModal();openSignupModal();return false;" style="color:var(--red);font-weight:600;">Sign up here</a>
+         </p>
+      </div>
+   </div>
+
+   <!-- SIGNUP MODAL -->
+   <div id="signupModal" class="modal">
+      <div class="modal-content">
+         <span class="close" onclick="closeSignupModal()">&times;</span>
+         <h2>Create Account</h2>
+         <form class="modal-form" onsubmit="handleSignup(event)">
+            <div class="form-row">
+               <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" id="signupFirstName" placeholder="John" required>
+               </div>
+               <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" id="signupLastName" placeholder="Doe" required>
+               </div>
+            </div>
+            <div class="form-group">
+               <label>Email</label>
+               <input type="email" id="signupEmail" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+               <label>Password</label>
+               <input type="password" id="signupPassword" placeholder="At least 8 characters" required>
+            </div>
+            <div class="form-group">
+               <label>Address</label>
+               <input type="text" id="signupAddress" placeholder="Your address" required>
+            </div>
+            <div class="form-group">
+               <label>Phone Number</label>
+               <input type="tel" id="signupPhone" placeholder="+639xx-xxx-xxxx" required>
+            </div>
+            <button type="submit" class="btn" style="width:100%;">Create Account</button>
+         </form>
+         <p style="text-align:center;margin-top:1rem;font-size:0.9rem;">
+            Already have an account? <a href="#" onclick="closeSignupModal();openLoginModal();return false;" style="color:var(--red);font-weight:600;">Login here</a>
+         </p>
+      </div>
+   </div>
+
+   <!-- CHECKOUT MODAL -->
+   <div id="checkoutModal" class="modal">
+      <div class="modal-content large">
+         <span class="close" onclick="closeCheckoutModal()">&times;</span>
+         <h2>Complete Your Order</h2>
+
+         <div class="order-summary" id="orderSummary"></div>
+
+         <form class="modal-form" onsubmit="handleCheckout(event)">
+            <div class="form-row">
+               <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" id="checkoutName" placeholder="Your full name" required>
+               </div>
+               <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" id="checkoutEmail" placeholder="your@email.com" required>
+               </div>
+            </div>
+            <div class="form-group">
+               <label>Phone Number</label>
+               <input type="tel" id="checkoutPhone" placeholder="+639xx-xxx-xxxx" required>
+            </div>
+            <div class="form-group">
+               <label>Delivery Address</label>
+               <input type="text" id="checkoutAddress" placeholder="Full delivery address" required>
+            </div>
+            <div class="form-group">
+               <label>City</label>
+               <input type="text" id="checkoutCity" placeholder="City" required>
+            </div>
+            <div class="form-group">
+               <label>Special Requests / Notes</label>
+               <textarea id="checkoutNotes" placeholder="Any special instructions?"></textarea>
+            </div>
+            <button type="submit" class="btn" style="width:100%;">Confirm Order</button>
+         </form>
+      </div>
+   </div>
+
+   <!-- CHAT MODAL -->
+   <div id="chatModal" class="modal">
+      <div class="modal-content">
+         <span class="close" onclick="closeChatModal()">&times;</span>
+         <h2>Chat with FYRO</h2>
+         <div style="background:#f5f5f5;border-radius:6px;padding:1rem;margin-bottom:1rem;height:250px;overflow-y:auto;border:1px solid var(--line);" id="chatBox">
+            <div style="text-align:center;color:var(--steel);font-size:0.9rem;">
+               <p><strong>Welcome to FYRO Support!</strong></p>
+               <p>Our team is here to help. Ask us anything about our products and services.</p>
+            </div>
+         </div>
+         <div class="modal-form">
+            <div style="display:flex;gap:0.5rem;">
+               <input type="text" id="chatInput" placeholder="Type your message..." style="flex:1;">
+               <button onclick="sendChatMessage()" style="background:var(--red);color:#fff;border:none;padding:0.8rem 1.5rem;border-radius:4px;cursor:pointer;font-weight:600;">Send</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      /* PRODUCT DATA */
+      const products = [
+         { id: 1, name: "Dry Chemical Extinguisher 10 LBS", price: 1000, original: 2300, category: "dry-chemical", description: "Refill service — powder-based ABC extinguisher", image: "product1.jpg", type: "refill" },
+         { id: 2, name: "Fire Extinguisher (HCFC) 10 LBS", price: 4200, original: 6150, category: "fire-extinguisher", description: "Refill service — clean-agent extinguisher", image: "product2.jpg", badge: true, type: "refill" },
+         { id: 3, name: "Safety Cabinet Set", price: 3500, original: 4500, category: "accessories", description: "Complete safety storage solution", image: "product3.jpg", type: "buy" },
+         { id: 4, name: "Dry Chemical Brand New 10 LBS", price: 2300, original: 2600, category: "dry-chemical", description: "Brand new — compact and reliable protection", image: "product4.jpg", type: "buy" },
+         { id: 5, name: "Emergency Kit Bundle", price: 2500, original: 3200, category: "accessories", description: "Complete emergency preparedness", image: "product5.jpg", type: "buy" },
+         { id: 6, name: "Fire Extinguisher Brand New 10 LBS", price: 6150, original: 6800, category: "fire-extinguisher", description: "Brand new — industrial strength protection", image: "product6.jpg", badge: true, type: "buy" }
+      ];
+
+      let currentUser = null;
+      let currentFilter = 'all';
+      let currentProduct = null;
+
+      /* AUTH FUNCTIONS */
+      function checkLogin() {
+         const user = localStorage.getItem('currentUser');
+         if (user) {
+            currentUser = JSON.parse(user);
+            updateAuthUI();
+         }
+      }
+
+      function updateAuthUI() {
+         const guestAuth = document.getElementById('guestAuth');
+         const userProfile = document.getElementById('userProfile');
+         if (currentUser) {
+            guestAuth.style.display = 'none';
+            userProfile.style.display = 'block';
+            document.getElementById('userName').textContent = currentUser.firstName + ' ' + currentUser.lastName;
+         } else {
+            guestAuth.style.display = 'flex';
+            userProfile.style.display = 'none';
+         }
+      }
+
+      function openLoginModal() {
+         document.getElementById('loginModal').style.display = 'block';
+      }
+
+      function closeLoginModal() {
+         document.getElementById('loginModal').style.display = 'none';
+      }
+
+      function openSignupModal() {
+         document.getElementById('signupModal').style.display = 'block';
+      }
+
+      function closeSignupModal() {
+         document.getElementById('signupModal').style.display = 'none';
+      }
+
+      function openCheckoutModal(product) {
+         currentProduct = product;
+         const modal = document.getElementById('checkoutModal');
+         
+         let summary = `
+            <div class="order-item">
+               <span><strong>${product.name}</strong></span>
+               <span>₱${product.price.toLocaleString()}</span>
+            </div>
+            <div class="order-total">
+               <span>Total Amount:</span>
+               <span>₱${product.price.toLocaleString()}</span>
+            </div>
+         `;
+         
+         document.getElementById('orderSummary').innerHTML = summary;
+
+         if (currentUser) {
+            document.getElementById('checkoutName').value = currentUser.firstName + ' ' + currentUser.lastName;
+            document.getElementById('checkoutEmail').value = currentUser.email;
+            document.getElementById('checkoutPhone').value = currentUser.phone || '';
+            document.getElementById('checkoutAddress').value = currentUser.address || '';
+         }
+
+         modal.style.display = 'block';
+      }
+
+      function closeCheckoutModal() {
+         document.getElementById('checkoutModal').style.display = 'none';
+      }
+
+      function openChatModal() {
+         document.getElementById('chatModal').style.display = 'block';
+      }
+
+      function closeChatModal() {
+         document.getElementById('chatModal').style.display = 'none';
+      }
+
+      function handleLogin(event) {
+         event.preventDefault();
+         const email = document.getElementById('loginEmail').value;
+         const password = document.getElementById('loginPassword').value;
+
+         // Mock login
+         const users = JSON.parse(localStorage.getItem('users') || '[]');
+         const user = users.find(u => u.email === email && u.password === password);
+
+         if (user) {
+            currentUser = user;
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            updateAuthUI();
+            closeLoginModal();
+            showNotification('Login successful! Welcome back.');
+            document.getElementById('loginEmail').value = '';
+            document.getElementById('loginPassword').value = '';
+         } else {
+            showNotification('Invalid email or password.');
+         }
+      }
+
+      function handleSignup(event) {
+         event.preventDefault();
+         const firstName = document.getElementById('signupFirstName').value;
+         const lastName = document.getElementById('signupLastName').value;
+         const email = document.getElementById('signupEmail').value;
+         const password = document.getElementById('signupPassword').value;
+         const address = document.getElementById('signupAddress').value;
+         const phone = document.getElementById('signupPhone').value;
+
+         let users = JSON.parse(localStorage.getItem('users') || '[]');
+         
+         if (users.find(u => u.email === email)) {
+            showNotification('Email already registered.');
+            return;
+         }
+
+         const newUser = { firstName, lastName, email, password, address, phone };
+         users.push(newUser);
+         localStorage.setItem('users', JSON.stringify(users));
+
+         currentUser = newUser;
+         localStorage.setItem('currentUser', JSON.stringify(newUser));
+         updateAuthUI();
+         closeSignupModal();
+         showNotification('Account created successfully! Welcome to FYRO.');
+
+         document.getElementById('signupFirstName').value = '';
+         document.getElementById('signupLastName').value = '';
+         document.getElementById('signupEmail').value = '';
+         document.getElementById('signupPassword').value = '';
+         document.getElementById('signupAddress').value = '';
+         document.getElementById('signupPhone').value = '';
+      }
+
+      function handleCheckout(event) {
+         event.preventDefault();
+         const name = document.getElementById('checkoutName').value;
+         const email = document.getElementById('checkoutEmail').value;
+         const phone = document.getElementById('checkoutPhone').value;
+         const address = document.getElementById('checkoutAddress').value;
+         const city = document.getElementById('checkoutCity').value;
+         const notes = document.getElementById('checkoutNotes').value;
+
+         // Save order
+         let orders = JSON.parse(localStorage.getItem('orders') || '[]');
+         const order = {
+            id: Date.now(),
+            customerName: name,
+            email: email,
+            phone: phone,
+            address: address,
+            city: city,
+            product: currentProduct.name,
+            price: currentProduct.price,
+            notes: notes,
+            date: new Date().toLocaleString()
+         };
+         orders.push(order);
+         localStorage.setItem('orders', JSON.stringify(orders));
+
+         closeCheckoutModal();
+         showNotification(`✓ Order placed successfully! Your order #${order.id} has been submitted. We'll contact you shortly.`);
+      }
+
+      function logout() {
+         currentUser = null;
+         localStorage.removeItem('currentUser');
+         updateAuthUI();
+         toggleDropdown();
+         showNotification('You have been logged out.');
+      }
+
+      function toggleDropdown() {
+         const menu = document.getElementById('dropdownMenu');
+         menu.classList.toggle('active');
+      }
+
+      function viewProfile() {
+         showNotification(`Profile: ${currentUser.firstName} ${currentUser.lastName}\nEmail: ${currentUser.email}\nAddress: ${currentUser.address}`);
+      }
+
+      function viewOrders() {
+         let orders = JSON.parse(localStorage.getItem('orders') || '[]');
+         if (orders.length === 0) {
+            showNotification('You have no orders yet.');
+         } else {
+            let orderList = 'Your Orders:\n\n';
+            orders.forEach(order => {
+               orderList += `Order #${order.id}\n${order.product} - ₱${order.price}\nDate: ${order.date}\n\n`;
+            });
+            showNotification(orderList);
+         }
+      }
+
+      /* PRODUCT FUNCTIONS */
+      function renderProducts() {
+         const grid = document.getElementById('productsGrid');
+         grid.innerHTML = '';
+         const filtered = currentFilter === 'all' ? products : products.filter(p => p.category === currentFilter);
+         filtered.forEach(product => {
+            const btnText = product.type === 'refill' ? 'Refill Now' : 'Buy Now';
+            grid.innerHTML += `
+               <div class="product-card reveal in">
+                  <div class="product-image">
+                     <img src="${product.image}" alt="${product.name}">
+                     ${product.badge ? '<div class="product-badge">On Sale</div>' : ''}
+                  </div>
+                  <div class="product-info">
+                     <div class="product-name">${product.name}</div>
+                     <div class="product-price">
+                        <span class="price-current">₱${product.price.toLocaleString()}</span>
+                        <span class="price-original">₱${product.original.toLocaleString()}</span>
+                     </div>
+                     <div class="product-desc">${product.description}</div>
+                     <div class="product-actions">
+                        <button onclick="handleBuyOrRefill(${product.id})">${btnText}</button>
+                        <button onclick="quickView(${product.id})">View</button>
+                     </div>
+                  </div>
+               </div>
+            `;
+         });
+      }
+
+      function handleBuyOrRefill(productId) {
+         const product = products.find(p => p.id === productId);
+         
+         if (!currentUser) {
+            showNotification('Please login first to proceed with your order.');
+            openLoginModal();
+            return;
+         }
+
+         openCheckoutModal(product);
+      }
+
+      function filterProducts(category, btn) {
+         currentFilter = category;
+         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+         btn.classList.add('active');
+         renderProducts();
+      }
+
+      function quickView(productId) {
+         const product = products.find(p => p.id === productId);
+         alert(`${product.name}\n\nPrice: ₱${product.price}\nOriginal: ₱${product.original}\nDescription: ${product.description}`);
+      }
+
+      function toggleMenu() {
+         document.querySelector('.nav-menu').classList.toggle('active');
+      }
+
+      function sendChatMessage() {
+         const input = document.getElementById('chatInput');
+         const message = input.value.trim();
+         if (!message) return;
+
+         const chatBox = document.getElementById('chatBox');
+         const userMsg = document.createElement('div');
+         userMsg.style.cssText = 'text-align:right;margin:0.5rem 0;color:var(--red);';
+         userMsg.textContent = 'You: ' + message;
+         chatBox.appendChild(userMsg);
+
+         setTimeout(() => {
+            const botMsg = document.createElement('div');
+            botMsg.style.cssText = 'margin:0.5rem 0;color:var(--ink);';
+            botMsg.textContent = 'Support: Thank you for your message. Our team will respond soon!';
+            chatBox.appendChild(botMsg);
+            chatBox.scrollTop = chatBox.scrollHeight;
+         }, 500);
+
+         input.value = '';
+      }
+
+      function showNotification(message) {
+         const notification = document.createElement('div');
+         notification.style.cssText = `
+            position:fixed;top:150px;right:20px;background:#c41e3a;color:#fff;
+            padding:1rem 2rem;border-radius:4px;z-index:3000;animation:slideInLeft 0.3s ease;
+            box-shadow:0 8px 20px rgba(0,0,0,0.25);max-width:300px;
+         `;
+         notification.textContent = message;
+         document.body.appendChild(notification);
+         setTimeout(() => {
+            notification.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+         }, 4000);
+      }
+
+      window.onclick = function (event) {
+         const loginModal = document.getElementById('loginModal');
+         const signupModal = document.getElementById('signupModal');
+         const checkoutModal = document.getElementById('checkoutModal');
+         const chatModal = document.getElementById('chatModal');
+         if (event.target === loginModal) closeLoginModal();
+         if (event.target === signupModal) closeSignupModal();
+         if (event.target === checkoutModal) closeCheckoutModal();
+         if (event.target === chatModal) closeChatModal();
+      };
+
+      /* SCROLL REVEAL */
+      const revealObserver = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+            if (entry.isIntersecting) {
+               entry.target.classList.add('in');
+               revealObserver.unobserve(entry.target);
+            }
+         });
+      }, { threshold: 0.15 });
+
+      /* 3D TILT */
+      function attachTilt(el) {
+         el.addEventListener('mousemove', (e) => {
+            const r = el.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            el.style.transform = `translateY(-8px) rotateX(${y * -6}deg) rotateY(${x * 6}deg)`;
+         });
+         el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+      }
+
+      /* HERO VIDEO SLIDER */
+      const videos = document.querySelectorAll(".hero-video");
+      let current = 0;
+      let sliderInterval = null;
+
+      videos.forEach((video, index) => {
+         video.pause();
+         video.currentTime = 0;
+         video.muted = true;
+         if (index === 0) {
+            video.classList.add("active");
+            video.play().catch(() => { });
+         } else {
+            video.classList.remove("active");
+         }
+      });
+
+      function changeVideo() {
+         videos[current].pause();
+         videos[current].currentTime = 0;
+         videos[current].classList.remove("active");
+         current = (current + 1) % videos.length;
+         videos[current].classList.add("active");
+         videos[current].currentTime = 0;
+         videos[current].play().catch(() => { });
+      }
+
+      sliderInterval = setInterval(changeVideo, 8000);
+
+      document.addEventListener("visibilitychange", () => {
+         if (document.hidden) {
+            clearInterval(sliderInterval);
+            videos[current].pause();
+         } else {
+            videos[current].play().catch(() => { });
+            sliderInterval = setInterval(changeVideo, 8000);
+         }
+      });
+
+      /* INIT */
+      document.addEventListener('DOMContentLoaded', () => {
+         checkLogin();
+         renderProducts();
+         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+         document.querySelectorAll('.service-card').forEach(attachTilt);
+
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+               const href = this.getAttribute('href');
+               if (href !== '#' && document.querySelector(href)) {
+                  e.preventDefault();
+                  document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                  document.querySelector('.nav-menu').classList.remove('active');
+               }
+            });
+         });
+      });
+   </script>
+
+</body>
+
+</html>
