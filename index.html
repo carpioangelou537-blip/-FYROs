@@ -44,6 +44,9 @@
       rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+   <!-- Supabase JS client -->
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
    <style>
       :root {
          --red: #c41e3a;
@@ -75,7 +78,96 @@
          overflow-x: hidden;
          background: var(--paper);
       }
+      span.badge {
+    font-size: 21px;
+    font-family: fangsong;
+    font-weight: 900;
+}
+.company-banner-section{
+    padding:60px 20px;
+    background:#f6f2e8;
+    display:flex;
+    justify-content:center;
+}
 
+.company-banner{
+    max-width:950px;
+    width:100%;
+    background:#f4efe6;
+    border:1px solid #d8d8d8;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 30px;
+    gap:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.banner-logo img{
+    width:150px;
+    height:auto;
+}
+
+.banner-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-info h2{
+    margin:0;
+    color:#222;
+    font-size:30px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.banner-info p{
+    margin:4px 0;
+    color:#444;
+    font-size:16px;
+}
+
+.made{
+    margin-top:10px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#555;
+    text-transform:uppercase;
+}
+
+.banner-bps{
+    text-align:center;
+}
+
+.banner-bps img{
+    width:100px;
+    margin-bottom:8px;
+}
+
+.banner-bps span{
+    display:block;
+    color:#444;
+    line-height:1.3;
+}
+
+@media(max-width:768px){
+
+    .company-banner{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .banner-logo img{
+        width:80px;
+    }
+
+    .banner-info h2{
+        font-size:22px;
+    }
+
+}
       h1,
       h2,
       h3,
@@ -1750,6 +1842,18 @@
          transform: translateY(-2px);
       }
 
+      .newsletter-form button:disabled {
+         opacity: 0.6;
+         cursor: not-allowed;
+         transform: none;
+      }
+
+      .newsletter-status {
+         font-size: 0.85rem;
+         min-height: 1.2rem;
+         color: #ffd9d9;
+      }
+
       /* FOOTER */
       footer {
          background: var(--ink);
@@ -2038,6 +2142,29 @@
 
       .tab-content.active {
          display: block;
+      }
+
+      .chat-mode-btn {
+         border: 1px solid #ddd;
+         background: #fff;
+         color: var(--ink);
+         padding: 0.65rem 0.95rem;
+         border-radius: 999px;
+         cursor: pointer;
+         font-weight: 700;
+         transition: all 0.2s ease;
+      }
+
+      .chat-mode-btn.active {
+         border-color: var(--red);
+         background: var(--red);
+         color: #fff;
+      }
+
+      .form-error {
+         color: var(--red-deep);
+         font-size: 0.85rem;
+         min-height: 1.2rem;
       }
 
       /* RESPONSIVE */
@@ -2519,10 +2646,10 @@
          <div class="map-info reveal">
             <div class="map-info-card">
                <h3>FYRO Main Office</h3>
-               <p><i class="fas fa-map-marker-alt"></i> Boathouse District, Iligan City</p>
-               <p><i class="fas fa-phone"></i> (+63) 975-804-3935</p>
-               <p><i class="fas fa-mobile-alt"></i> (+63) 939-240-0052</p>
-               <p><i class="fas fa-envelope"></i> pilipinasquiban@spc.edu.ph</p>
+               <p><i class="fas fa-map-marker-alt"></i> Purok Santol, Maranding, Lala, Lanao Del Norte</p>
+               <p><i class="fas fa-phone"></i> 0977-601-6503</p>
+               <p><i class="fas fa-mobile-alt"></i> 0918-366-7925</p>
+               <p><i class="fas fa-envelope"></i> rolandenoy35@gmail.com</p>
                <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #ddd;"><i
                      class="fas fa-info-circle"></i> <strong>Hours:</strong> Mon-Fri 8AM-6PM, Sat 9AM-4PM</p>
             </div>
@@ -2536,7 +2663,7 @@
                   <i class="fas fa-truck"></i> Free delivery within Iligan City | Fast delivery nationwide
                </p>
                <button class="btn btn-outline" style="margin-top:1rem; border-color:var(--red); color:var(--red);"
-                  onclick="openChatModal()">Ask About My Order</button>
+                  onclick="openChatModal('order_tracking')">Ask About My Order</button>
             </div>
          </div>
       </div>
@@ -2553,10 +2680,10 @@
          <div class="branches-grid" style="margin-top: 3rem;">
             <div class="branch-card reveal">
                <div class="branch-icon"><i class="fas fa-map-marker-alt"></i></div>
-               <h3>Main Office - Iligan City</h3>
-               <p><i class="fas fa-phone"></i> 09758043935 / 09392400052</p>
-               <p><i class="fas fa-envelope"></i> pilipinasquiban@spc.edu.ph</p>
-               <p><i class="fas fa-map-pin"></i> Boathouse District, Iligan City</p>
+               <h3>Main Office - Lala, Lanao Del Norte</h3>
+               <p><i class="fas fa-phone"></i> 0977-601-6503 / 0918-366-7925</p>
+               <p><i class="fas fa-envelope"></i> rolandenoy35@gmail.com</p>
+               <p><i class="fas fa-map-pin"></i> Purok Santol, Maranding, Lala, Lanao Del Norte</p>
             </div>
             <div class="branch-card reveal">
                <div class="branch-icon"><i class="fas fa-building"></i></div>
@@ -2604,28 +2731,40 @@
    </section>
 
    <!-- AUTHORIZED SALES REPRESENTATIVE -->
-   <section class="rep-section" id="contact">
-      <div class="rep-card reveal">
-         <div class="rep-left">
-            <h3>Pilipinas A. Quiban</h3>
-            <div class="rep-role">Authorized Sales Representative, FYRO Fire Extinguisher Trading</div>
-            <div class="rep-contact-item"><i class="fas fa-phone"></i> 09758043935 / 09392400052</div>
-            <div class="rep-contact-item"><i class="fas fa-comment-dots"></i> Pinas Ancing (Social Media)</div>
-            <div class="rep-contact-item"><i class="fas fa-envelope"></i> pilipinasquiban@spc.edu.ph</div>
-            <div class="rep-contact-item"><i class="fas fa-location-dot"></i> Boathouse District, Iligan City,
-               Philippines</div>
-         </div>
-         <div class="rep-right">
-            <h4>Get in Touch</h4>
-            <p>Please review our comprehensive price list and service options for your fire safety needs. We're
-               dedicated to providing quality products and reliable service to all our partners.</p>
-            <p>We are very much willing to assist you with your fire safety requirements. Thank you for considering FYRO
-               as your trusted fire protection partner.</p>
-            <button class="btn" style="align-self:flex-start;" onclick="openChatModal()"><i
-                  class="fas fa-paper-plane"></i> Send an Inquiry</button>
-         </div>
-      </div>
-   </section>
+   <!-- CONTACT BANNER -->
+<section class="company-banner-section" id="contact">
+    <div class="company-banner reveal">
+
+        <div class="banner-logo">
+            <img src="logos.png" alt="FYRO Logo">
+        </div>
+
+        <div class="banner-info">
+            <h2>FYRO FIRE EXTINGUISHER TRADING</h2>
+
+            <p>Purok Santol, Maranding, Lala, Lanao Del Norte</p>
+
+            <p>
+                Contact No:
+                <strong>0977-601-6503</strong> /
+                <strong>0918-366-7925</strong>
+            </p>
+
+            <p>Email: rolandenoy35@gmail.com</p>
+
+            <div class="made">
+                MADE IN THE PHILIPPINES
+            </div>
+        </div>
+
+        <div class="banner-bps">
+            <img src="bps-logo.png" alt="BPS Logo">
+            <span>CERTIFIED<br>Product Quality</span>
+            <span class="badge">BPS</span>
+        </div>
+
+    </div>
+</section>
 
    <!-- NEWSLETTER -->
    <section class="newsletter-section">
@@ -2634,9 +2773,10 @@
          <p>Subscribe to our newsletter for tips, updates, and exclusive offers on fire safety products and services.
          </p>
          <div class="newsletter-form">
-            <input type="email" placeholder="Enter your email address" required>
-            <button>Subscribe Now</button>
+            <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+            <button id="newsletterBtn" onclick="handleNewsletterSubscribe()">Subscribe Now</button>
          </div>
+         <div class="newsletter-status" id="newsletterStatus"></div>
       </div>
    </section>
 
@@ -2668,10 +2808,10 @@
          <div class="footer-section">
             <h3>Contact Info</h3>
             <ul>
-               <li><a href="tel:+639758043935">(+63) 975-804-3935</a></li>
-               <li><a href="tel:+639392400052">(+63) 939-240-0052</a></li>
-               <li><a href="mailto:pilipinasquiban@spc.edu.ph">pilipinasquiban@spc.edu.ph</a></li>
-               <li>Boathouse District, Iligan City</li>
+               <li><a href="tel:+639776016503">0977-601-6503</a></li>
+               <li><a href="tel:+639183667925">0918-366-7925</a></li>
+               <li><a href="mailto:rolandenoy35@gmail.com">rolandenoy35@gmail.com</a></li>
+               <li>Purok Santol, Maranding, Lala, Lanao Del Norte</li>
                <li>🇵🇭 Made in the Philippines · BPS Certified</li>
             </ul>
          </div>
@@ -2699,10 +2839,10 @@
          <h2>Complete Your Order</h2>
 
          <div class="tabs" style="margin-top: 1.5rem;">
-            <button class="tab active" onclick="switchOrderType(event, 'buy')">
+            <button class="tab active" data-order-type="buy" onclick="switchOrderType(event, 'buy')">
                <i class="fas fa-shopping-bag" style="margin-right: 0.5rem;"></i> Buy New
             </button>
-            <button class="tab" onclick="switchOrderType(event, 'refill')">
+            <button class="tab" data-order-type="refill" onclick="switchOrderType(event, 'refill')">
                <i class="fas fa-sync" style="margin-right: 0.5rem;"></i> Refill Service
             </button>
          </div>
@@ -2742,7 +2882,8 @@
                <textarea id="checkoutNotes" placeholder="Any special instructions?"></textarea>
             </div>
             <input type="hidden" id="orderType" value="buy">
-            <button type="submit" class="btn" style="width:100%;">Confirm Order</button>
+            <div class="form-error" id="checkoutError"></div>
+            <button type="submit" class="btn" style="width:100%;" id="checkoutSubmitBtn">Confirm Order</button>
          </form>
       </div>
    </div>
@@ -2762,6 +2903,12 @@
       <div class="modal-content">
          <span class="close" onclick="closeChatModal()">&times;</span>
          <h2>Chat with FYRO</h2>
+         <div style="display:flex;gap:0.5rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+            <button type="button" class="chat-mode-btn active" data-mode="chat" onclick="setChatMode('chat', this)">Normal Message</button>
+            <button type="button" class="chat-mode-btn" data-mode="inquiry" onclick="setChatMode('inquiry', this)">Send Inquiry</button>
+            <button type="button" class="chat-mode-btn" data-mode="order_tracking" onclick="setChatMode('order_tracking', this)">Track Order</button>
+         </div>
+         <div id="chatModeBanner" style="margin-bottom:0.85rem;padding:0.75rem 1rem;border-radius:0.75rem;background:rgba(196,30,58,0.08);color:var(--ink);font-weight:700;">Normal Message</div>
          <div
             style="background:#f5f5f5;border-radius:6px;padding:1rem;margin-bottom:1rem;height:250px;overflow-y:auto;border:1px solid var(--line);"
             id="chatBox">
@@ -2781,6 +2928,78 @@
    </div>
 
    <script>
+      /* ============================================================
+         SUPABASE SETUP
+         Replace these two values with your project's URL and anon
+         (public) key — Supabase dashboard > Project Settings > API.
+         The anon key is safe to expose in client-side code; access
+         to data is controlled by the Row Level Security policies
+         from supabase_schema.sql.
+      ============================================================ */
+      const SUPABASE_URL = 'https://ilspuifgbmthccntmtjp.supabase.co';
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlsc3B1aWZnYm10aGNjbnRtdGpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5OTcxMjYsImV4cCI6MjA5ODU3MzEyNn0.6B6e4w5R5GTOoXhgwHuW1DrhCgpWQXOUJouOkL6NElk';
+      const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      const CHAT_WELCOME_MESSAGE = `Hi! 👋 I am Pilipinas Quiban's AI Assistant.
+
+Thank you for reaching out! We've received your message and will get back to you as soon as possible during our business hours.
+
+In the meantime, feel free to tell us:
+• Your name
+• Your inquiry or concern
+• Any order or subscription details (if applicable)
+
+We'll assist you as soon as we can. Thank you for choosing Pilipinas Quiban!`;
+      const CHAT_RECEIVED_REPLY = `Hi! 👋 Welcome to Pilipinas Quiban.
+
+Thank you for reaching out to us! We have received your message. Our team will review your inquiry and will reach out to you as soon as possible during our business hours.
+
+We appreciate your patience and look forward to assisting you!`;
+      const ORDER_TRACKING_PROMPT = `Thank you for contacting Pilipinas Quiban!
+
+To help us track your order, please provide your **Order ID** or **Tracking Number**.
+
+Once we receive your details, our team will verify your order and reach out to you as soon as possible with an update.`;
+      const CHAT_MODE_LABELS = {
+         chat: 'Normal Message',
+         inquiry: 'Send Inquiry',
+         order_tracking: 'Track Order'
+      };
+      const CHAT_AUTORESPONSE = {
+         chat: CHAT_RECEIVED_REPLY,
+         inquiry: CHAT_RECEIVED_REPLY
+      };
+      let chatMode = 'chat';
+
+      /* Per-visitor chat session id, kept in localStorage so a
+         returning visitor sees their own chat history + admin replies. */
+      function getChatSessionId() {
+         let id = localStorage.getItem('fyro_chat_session');
+         if (!id) {
+            id = 'sess_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+            localStorage.setItem('fyro_chat_session', id);
+         }
+         return id;
+      }
+      const CHAT_SESSION_ID = getChatSessionId();
+      let chatChannel = null;
+
+      function getAutoResponseCooldownKey() {
+         return `fyro_auto_response_${CHAT_SESSION_ID}_${chatMode}`;
+      }
+
+      function shouldSendAutoResponse() {
+         const key = getAutoResponseCooldownKey();
+         const lastSent = Number(localStorage.getItem(key));
+         const oneDayMs = 24 * 60 * 60 * 1000;
+
+         if (!lastSent) return true;
+         return Date.now() - lastSent >= oneDayMs;
+      }
+
+      function markAutoResponseSent() {
+         localStorage.setItem(getAutoResponseCooldownKey(), Date.now().toString());
+      }
+
       /* LOGO LOADING SCREEN LOGIC */
       document.documentElement.classList.add('loading');
 
@@ -2886,6 +3105,7 @@
          document.getElementById('checkoutAddress').value = '';
          document.getElementById('checkoutCity').value = '';
          document.getElementById('checkoutNotes').value = '';
+         document.getElementById('checkoutError').textContent = '';
 
          // Set default order type based on product
          const defaultType = product.type === 'refill' ? 'refill' : 'buy';
@@ -2903,10 +3123,9 @@
          const tabs = document.querySelectorAll('.tab');
          tabs.forEach(tab => tab.classList.remove('active'));
 
-         if (event) {
-            event.target.closest('.tab').classList.add('active');
-         } else {
-            document.querySelector(`.tab:${type === 'refill' ? 'last' : 'first'}-child`).classList.add('active');
+         const selectedTab = Array.from(tabs).find(tab => tab.dataset.orderType === type);
+         if (selectedTab) {
+            selectedTab.classList.add('active');
          }
 
          document.getElementById('orderType').value = type;
@@ -2923,8 +3142,33 @@
          document.getElementById('checkoutModal').style.display = 'none';
       }
 
-      function openChatModal() {
+      function setChatMode(mode, button) {
+         chatMode = mode;
+         document.querySelectorAll('.chat-mode-btn').forEach(btn => btn.classList.remove('active'));
+         if (button) button.classList.add('active');
+
+         const banner = document.getElementById('chatModeBanner');
+         if (banner) {
+            banner.textContent = mode === 'order_tracking'
+               ? 'Order Tracking Inquiry'
+               : mode === 'inquiry'
+                  ? 'Send Inquiry'
+                  : 'Normal Message';
+         }
+
+         const chatModal = document.getElementById('chatModal');
+         if (chatModal && chatModal.style.display === 'block') {
+            loadChatHistory(mode);
+         }
+      }
+
+      function openChatModal(mode = 'chat') {
+         const button = document.querySelector(`.chat-mode-btn[data-mode="${mode}"]`);
+         setChatMode(mode, button);
+
          document.getElementById('chatModal').style.display = 'block';
+         loadChatHistory(mode);
+         subscribeToChatReplies();
       }
 
       function closeChatModal() {
@@ -2935,74 +3179,127 @@
          document.getElementById('orderConfirmModal').style.display = 'none';
       }
 
-      function handleCheckout(event) {
-         event.preventDefault();
-         const name = document.getElementById('checkoutName').value;
-         const email = document.getElementById('checkoutEmail').value;
-         const phone = document.getElementById('checkoutPhone').value;
-         const address = document.getElementById('checkoutAddress').value;
-         const city = document.getElementById('checkoutCity').value;
-         const notes = document.getElementById('checkoutNotes').value;
-         const orderType = document.getElementById('orderType').value;
+      /* ============================================================
+         CHECKOUT -> Supabase "orders" table
+      ============================================================ */
+      async function ensureChatPrompt(mode) {
+         const promptText = mode === 'order_tracking' ? ORDER_TRACKING_PROMPT : CHAT_WELCOME_MESSAGE;
+         const { data, error } = await supabaseClient
+            .from('chat_messages')
+            .select('id')
+            .eq('session_id', CHAT_SESSION_ID)
+            .eq('visitor_name', mode)
+            .limit(1);
 
-         const orderId = Date.now();
-         const typeLabel = orderType === 'refill' ? 'Refill Service' : 'Purchase';
+         if (error) {
+            console.error('Failed to check chat prompt:', error);
+            return;
+         }
 
-         closeCheckoutModal();
-
-         // Show order details in a confirmation modal instead of a browser alert
-         const confirmBody = document.getElementById('orderConfirmBody');
-         confirmBody.innerHTML = `
-            <div class="order-item"><span>Order #</span><span>${orderId}</span></div>
-            <div class="order-item"><span>Item</span><span>${currentProduct.name}</span></div>
-            <div class="order-item"><span>Order Type</span><span>${typeLabel}</span></div>
-            <div class="order-item"><span>Name</span><span>${name}</span></div>
-            <div class="order-item"><span>Phone</span><span>${phone}</span></div>
-            <div class="order-item"><span>Email</span><span>${email}</span></div>
-            <div class="order-item"><span>Delivery Address</span><span>${address}, ${city}</span></div>
-            ${notes ? `<div class="order-item"><span>Notes</span><span>${notes}</span></div>` : ''}
-            <div class="order-total"><span>Total Amount:</span><span>₱${currentProduct.price.toLocaleString()}</span></div>
-         `;
-         document.getElementById('orderConfirmModal').style.display = 'block';
+         if (!data || data.length === 0) {
+            await supabaseClient.from('chat_messages').insert({
+               session_id: CHAT_SESSION_ID,
+               sender: 'admin',
+               message: promptText,
+               visitor_name: mode
+            });
+         }
       }
 
-      /* PRODUCT FUNCTIONS */
-      function renderProducts() {
-         const grid = document.getElementById('productsGrid');
-         grid.innerHTML = '';
-         const filtered = currentFilter === 'all' ? products : products.filter(p => p.category === currentFilter);
-         filtered.forEach(product => {
-            const btnText = product.type === 'refill' ? 'Refill Now' : 'Buy Now';
-            const specsHtml = product.specs ? `
-               <div class="product-specs">
-                  <ul>
-                     ${product.specs.map(spec => `<li><i class="fas fa-dot-circle"></i> ${spec}</li>`).join('')}
-                  </ul>
-               </div>
-            ` : '';
-            grid.innerHTML += `
-               <div class="product-card reveal in">
-                  <div class="product-image">
-                     <img src="${product.image}" alt="${product.name}">
-                     ${product.badge ? '<div class="product-badge">On Sale</div>' : ''}
-                  </div>
-                  <div class="product-info">
-                     <div class="product-name">${product.name}</div>
-                     <div class="product-price">
-                        <span class="price-current">₱${product.price.toLocaleString()}</span>
-                        <span class="price-original">₱${product.original.toLocaleString()}</span>
-                     </div>
-                     <div class="product-desc">${product.description}</div>
-                     ${specsHtml}
-                     <div class="product-actions">
-                        <button onclick="handleBuyOrRefill(${product.id})">${btnText}</button>
-                        <button onclick="quickView(${product.id})">View</button>
-                     </div>
-                  </div>
-               </div>
+         async function handleCheckout(event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById('checkoutSubmitBtn');
+            const errorEl = document.getElementById('checkoutError');
+            errorEl.textContent = '';
+
+            const name = document.getElementById('checkoutName').value.trim();
+            const email = document.getElementById('checkoutEmail').value.trim();
+            const phone = document.getElementById('checkoutPhone').value.trim();
+            const address = document.getElementById('checkoutAddress').value.trim();
+            const city = document.getElementById('checkoutCity').value.trim();
+            const notes = document.getElementById('checkoutNotes').value.trim();
+            const orderType = document.getElementById('orderType').value;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Placing order…';
+
+            const { data, error } = await supabaseClient
+               .from('orders')
+               .insert({
+                  product_name: currentProduct.name,
+                  product_price: currentProduct.price,
+                  order_type: orderType,
+                  customer_name: name,
+                  email: email,
+                  phone: phone,
+                  address: address,
+                  city: city,
+                  notes: notes || null
+               })
+               .select()
+               .single();
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Confirm Order';
+
+            if (error) {
+               console.error('Order insert failed:', error);
+               errorEl.textContent = 'Something went wrong sending your order. Please try again or call us directly.';
+               return;
+            }
+
+            closeCheckoutModal();
+
+            const typeLabel = orderType === 'refill' ? 'Refill Service' : 'Purchase';
+            const confirmBody = document.getElementById('orderConfirmBody');
+            confirmBody.innerHTML = `
+               <div class="order-item"><span>Order #</span><span>${data.order_number}</span></div>
+               <div class="order-item"><span>Item</span><span>${currentProduct.name}</span></div>
+               <div class="order-item"><span>Order Type</span><span>${typeLabel}</span></div>
+               <div class="order-item"><span>Name</span><span>${name}</span></div>
+               <div class="order-item"><span>Phone</span><span>${phone}</span></div>
+               <div class="order-item"><span>Email</span><span>${email}</span></div>
+               <div class="order-item"><span>Delivery Address</span><span>${address}, ${city}</span></div>
+               ${notes ? `<div class="order-item"><span>Notes</span><span>${notes}</span></div>` : ''}
+               <div class="order-total"><span>Total Amount:</span><span>₱${currentProduct.price.toLocaleString()}</span></div>
             `;
-         });
-      }
+            document.getElementById('orderConfirmModal').style.display = 'block';
+         }
+
+         /* PRODUCT FUNCTIONS */
+         function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+            const filtered = currentFilter === 'all' ? products : products.filter(p => p.category === currentFilter);
+            filtered.forEach(product => {
+               const btnText = product.type === 'refill' ? 'Refill Now' : 'Buy Now';
+               const specsHtml = product.specs ? `
+                  <div class="product-specs">
+                     <ul>
+                        ${product.specs.map(spec => `<li><i class="fas fa-dot-circle"></i> ${spec}</li>`).join('')}
+                     </ul>
+                  </div>
+               ` : '';
+               grid.innerHTML += `
+                  <div class="product-card reveal in">
+                     <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        ${product.badge ? '<div class="product-badge">On Sale</div>' : ''}
+                     </div>
+                     <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-desc">${product.description}</div>
+                        ${specsHtml}
+                        <div class="product-actions">
+                           <button onclick="handleBuyOrRefill(${product.id})">${btnText}</button>
+                           <button onclick="quickView(${product.id})">View</button>
+                        </div>
+                     </div>
+                  </div>
+               `;
+            });
+         }
 
       function handleBuyOrRefill(productId) {
          const product = products.find(p => p.id === productId);
@@ -3023,8 +3320,6 @@
          const confirmBody = document.getElementById('orderConfirmBody');
          document.querySelector('#orderConfirmModal h2').innerHTML = product.name;
          confirmBody.innerHTML = `
-            <div class="order-item"><span>Price</span><span>₱${product.price.toLocaleString()}</span></div>
-            <div class="order-item"><span>Original Price</span><span>₱${product.original.toLocaleString()}</span></div>
             <div class="order-item"><span>Description</span><span>${product.description}</span></div>
             ${specsList ? `<div class="product-specs" style="margin-top:0.5rem;"><ul>${specsList}</ul></div>` : ''}
          `;
@@ -3035,26 +3330,243 @@
          document.querySelector('.nav-menu').classList.toggle('active');
       }
 
-      function sendChatMessage() {
-         const input = document.getElementById('chatInput');
-         const message = input.value.trim();
-         if (!message) return;
+      /* ============================================================
+         CHAT WIDGET -> Supabase "chat_messages" table (realtime)
+      ============================================================ */
+      function isAutoMessage(row) {
+         return row.sender === 'admin' && (
+            row.message === CHAT_WELCOME_MESSAGE ||
+            row.message === CHAT_RECEIVED_REPLY ||
+            row.message === ORDER_TRACKING_PROMPT
+         );
+      }
 
+      function renderChatMessage(row) {
          const chatBox = document.getElementById('chatBox');
-         const userMsg = document.createElement('div');
-         userMsg.style.cssText = 'text-align:right;margin:0.5rem 0;color:var(--red);';
-         userMsg.textContent = 'You: ' + message;
-         chatBox.appendChild(userMsg);
+         const wrapper = document.createElement('div');
+         wrapper.style.display = 'flex';
+         wrapper.style.flexDirection = 'column';
+         wrapper.style.alignItems = row.sender === 'visitor' ? 'flex-end' : 'flex-start';
+         wrapper.style.margin = '0.45rem 0';
 
-         setTimeout(() => {
-            const botMsg = document.createElement('div');
-            botMsg.style.cssText = 'margin:0.5rem 0;color:var(--ink);';
-            botMsg.textContent = 'Support: Thank you for your message. Our team will respond soon!';
-            chatBox.appendChild(botMsg);
-            chatBox.scrollTop = chatBox.scrollHeight;
-         }, 500);
+         const label = document.createElement('div');
+         label.style.fontSize = '0.78rem';
+         label.style.opacity = '0.75';
+         label.style.marginBottom = '0.25rem';
+         if (row.sender === 'visitor') {
+            let modeLabel = '';
+            if (row.visitor_name === 'inquiry') modeLabel = ' • Inquiry';
+            if (row.visitor_name === 'order_tracking') modeLabel = ' • Track Order';
+            label.textContent = `You${modeLabel}`;
+         } else {
+            label.textContent = isAutoMessage(row) ? 'Auto-response' : 'FYRO Support';
+         }
 
-         input.value = '';
+         const bubble = document.createElement('div');
+         bubble.style.padding = '0.9rem 1rem';
+         bubble.style.borderRadius = '14px';
+         bubble.style.maxWidth = '100%';
+         bubble.style.whiteSpace = 'pre-wrap';
+         bubble.style.wordBreak = 'break-word';
+         bubble.style.boxShadow = '0 4px 14px rgba(0,0,0,0.06)';
+
+         if (row.sender === 'visitor') {
+            bubble.style.background = 'rgba(196, 30, 58, 0.12)';
+            bubble.style.color = 'var(--red)';
+         } else if (isAutoMessage(row)) {
+            bubble.style.background = 'rgba(240, 240, 240, 0.95)';
+            bubble.style.color = 'var(--ink)';
+            bubble.style.border = '1px solid rgba(21, 19, 15, 0.12)';
+         } else {
+            bubble.style.background = '#fff';
+            bubble.style.color = 'var(--ink)';
+            bubble.style.border = '1px solid rgba(196, 30, 58, 0.14)';
+         }
+
+         bubble.textContent = row.message;
+         wrapper.appendChild(label);
+         wrapper.appendChild(bubble);
+         chatBox.appendChild(wrapper);
+         chatBox.scrollTop = chatBox.scrollHeight;
+      }
+
+      async function loadChatHistory(mode = 'chat') {
+         const chatBox = document.getElementById('chatBox');
+         const { data, error } = await supabaseClient
+            .from('chat_messages')
+            .select('*')
+            .eq('session_id', CHAT_SESSION_ID)
+            .eq('visitor_name', mode)
+            .order('created_at', { ascending: true });
+
+         if (error) {
+            console.error('Failed to load chat history:', error);
+            chatBox.innerHTML = '<p style="text-align:center;color:var(--red);"><strong>Unable to load chat history right now.</strong></p>';
+            return;
+         }
+
+         if (!data || data.length === 0) {
+            await ensureChatPrompt(mode);
+            return loadChatHistory(mode);
+         }
+
+         chatBox.innerHTML = '';
+         data.forEach(renderChatMessage);
+      }
+
+      function subscribeToChatReplies() {
+         if (chatChannel) return; // already subscribed
+         chatChannel = supabaseClient
+            .channel('chat_' + CHAT_SESSION_ID)
+            .on('postgres_changes', {
+               event: 'INSERT',
+               schema: 'public',
+               table: 'chat_messages',
+               filter: `session_id=eq.${CHAT_SESSION_ID}`
+            }, (payload) => {
+               if (payload.new.sender === 'admin' && payload.new.visitor_name === chatMode) {
+                  renderChatMessage(payload.new);
+               }
+            })
+            .subscribe();
+      }
+
+      
+     async function sendChatMessage() {
+
+    const input = document.getElementById("chatInput");
+    const message = input.value.trim();
+
+    if (!message) return;
+
+    input.value = "";
+
+    const optimisticRow = {
+        sender: "visitor",
+        message,
+        visitor_name: chatMode
+    };
+
+    renderChatMessage(optimisticRow);
+
+    try {
+
+        // Save chat message
+        const { error: chatError } = await supabaseClient
+            .from("chat_messages")
+            .insert([
+                {
+                    session_id: CHAT_SESSION_ID,
+                    sender: "visitor",
+                    message: message,
+                    visitor_name: chatMode
+                }
+            ]);
+
+        if (chatError) {
+            throw chatError;
+        }
+
+        // Save inquiry
+        const { error: inquiryError } = await supabaseClient
+            .from("inquiries")
+            .insert([
+                {
+                    name: null,
+                    email: null,
+                    phone: null,
+                    message: message,
+                    source: "chat"
+                }
+            ]);
+
+        if (inquiryError) {
+            throw inquiryError;
+        }
+
+        const autoReply = CHAT_AUTORESPONSE[chatMode];
+
+        if (autoReply && shouldSendAutoResponse()) {
+
+            const { error: autoError } = await supabaseClient
+                .from("chat_messages")
+                .insert([
+                    {
+                        session_id: CHAT_SESSION_ID,
+                        sender: "admin",
+                        message: autoReply,
+                        visitor_name: chatMode
+                    }
+                ]);
+
+            if (!autoError) {
+                markAutoResponseSent();
+            } else {
+                console.error(autoError);
+            }
+        }
+
+    } catch (err) {
+
+        console.error("Chat Error:", err);
+
+        const chatBox = document.getElementById("chatBox");
+
+        const errDiv = document.createElement("div");
+
+        errDiv.style.cssText = `
+            text-align:center;
+            color:#d32f2f;
+            font-size:13px;
+            margin:10px 0;
+        `;
+
+        errDiv.textContent =
+            err.message || "Failed to send message.";
+
+        chatBox.appendChild(errDiv);
+
+    }
+
+}
+
+      /* ============================================================
+         NEWSLETTER -> Supabase "newsletter_subscribers" table
+      ============================================================ */
+      async function handleNewsletterSubscribe() {
+         const emailInput = document.getElementById('newsletterEmail');
+         const statusEl = document.getElementById('newsletterStatus');
+         const btn = document.getElementById('newsletterBtn');
+         const email = emailInput.value.trim();
+
+         if (!email) {
+            statusEl.textContent = 'Please enter your email address.';
+            return;
+         }
+
+         btn.disabled = true;
+         btn.textContent = 'Subscribing…';
+         statusEl.textContent = '';
+
+         const { error } = await supabaseClient
+            .from('newsletter_subscribers')
+            .insert({ email: email });
+
+         btn.disabled = false;
+         btn.textContent = 'Subscribe Now';
+
+         if (error) {
+            if (error.code === '23505') {
+               statusEl.textContent = "You're already subscribed — thank you!";
+            } else {
+               console.error('Newsletter subscribe failed:', error);
+               statusEl.textContent = 'Something went wrong. Please try again.';
+            }
+            return;
+         }
+
+         emailInput.value = '';
+         statusEl.textContent = "You're subscribed! Thanks for joining.";
       }
 
       window.onclick = function (event) {
