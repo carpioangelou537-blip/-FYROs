@@ -78,96 +78,146 @@
          overflow-x: hidden;
          background: var(--paper);
       }
+
       span.badge {
-    font-size: 21px;
-    font-family: fangsong;
-    font-weight: 900;
-}
-.company-banner-section{
-    padding:60px 20px;
-    background:#f6f2e8;
-    display:flex;
-    justify-content:center;
-}
+         font-size: 21px;
+         font-family: fangsong;
+         font-weight: 900;
+      }
 
-.company-banner{
-    max-width:950px;
-    width:100%;
-    background:#f4efe6;
-    border:1px solid #d8d8d8;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:18px 30px;
-    gap:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
+      .chat-button {
+         position: fixed;
+      }
 
-.banner-logo img{
-    width:150px;
-    height:auto;
-}
+      .chat-badge {
 
-.banner-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+         position: absolute;
 
-.banner-info h2{
-    margin:0;
-    color:#222;
-    font-size:30px;
-    font-weight:800;
-    text-transform:uppercase;
-}
+         top: -4px;
 
-.banner-info p{
-    margin:4px 0;
-    color:#444;
-    font-size:16px;
-}
+         right: -4px;
 
-.made{
-    margin-top:10px;
-    font-weight:700;
-    letter-spacing:1px;
-    color:#555;
-    text-transform:uppercase;
-}
+         background: #ff3b30;
 
-.banner-bps{
-    text-align:center;
-}
+         color: #fff;
 
-.banner-bps img{
-    width:100px;
-    margin-bottom:8px;
-}
+         border-radius: 50%;
 
-.banner-bps span{
-    display:block;
-    color:#444;
-    line-height:1.3;
-}
+         min-width: 20px;
 
-@media(max-width:768px){
+         height: 20px;
 
-    .company-banner{
-        flex-direction:column;
-        text-align:center;
-    }
+         display: flex;
 
-    .banner-logo img{
-        width:80px;
-    }
+         align-items: center;
 
-    .banner-info h2{
-        font-size:22px;
-    }
+         justify-content: center;
 
-}
+         font-size: 11px;
+
+         font-weight: bold;
+
+         transform: scale(0);
+
+         transition: .25s;
+
+         box-shadow: 0 0 0 2px white;
+
+         z-index: 999;
+      }
+
+      .chat-badge.show {
+
+         transform: scale(1);
+
+      }
+
+      .company-banner-section {
+         padding: 60px 20px;
+         background: #f6f2e8;
+         display: flex;
+         justify-content: center;
+      }
+
+      .company-banner {
+         max-width: 950px;
+         width: 100%;
+         background: #f4efe6;
+         border: 1px solid #d8d8d8;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 18px 30px;
+         gap: 20px;
+         box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+      }
+
+      .banner-logo img {
+         width: 150px;
+         height: auto;
+      }
+
+      .banner-info {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .banner-info h2 {
+         margin: 0;
+         color: #222;
+         font-size: 30px;
+         font-weight: 800;
+         text-transform: uppercase;
+      }
+
+      .banner-info p {
+         margin: 4px 0;
+         color: #444;
+         font-size: 16px;
+      }
+
+      .made {
+         margin-top: 10px;
+         font-weight: 700;
+         letter-spacing: 1px;
+         color: #555;
+         text-transform: uppercase;
+      }
+
+      .banner-bps {
+         text-align: center;
+      }
+
+      .banner-bps img {
+         width: 100px;
+         margin-bottom: 8px;
+      }
+
+      .banner-bps span {
+         display: block;
+         color: #444;
+         line-height: 1.3;
+      }
+
+      @media(max-width:768px) {
+
+         .company-banner {
+            flex-direction: column;
+            text-align: center;
+         }
+
+         .banner-logo img {
+            width: 80px;
+         }
+
+         .banner-info h2 {
+            font-size: 22px;
+         }
+
+      }
+
       h1,
       h2,
       h3,
@@ -254,22 +304,22 @@
          }
       }
 
-    .loader-logo {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-}
+      .loader-logo {
+         width: 120px;
+         height: 120px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         z-index: 2;
+      }
 
-.loader-logo img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
-    user-select: none;
-    pointer-events: none;
-}
+      .loader-logo img {
+         width: 70%;
+         height: 70%;
+         object-fit: contain;
+         user-select: none;
+         pointer-events: none;
+      }
 
       .loader-wordmark {
          font-family: 'Oswald', sans-serif;
@@ -404,7 +454,7 @@
 
       /* NAVBAR */
       nav {
-        background: linear-gradient(135deg, #ffffff 0%, var(--red-deep) 100%);
+         background: linear-gradient(135deg, #ffffff 0%, var(--red-deep) 100%);
          padding: 0.9rem 2rem;
          margin-top: 38px;
          position: fixed;
@@ -422,27 +472,29 @@
          align-items: center;
       }
 
-   .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-.logo img {
-    width: 46px;
-    height: 46px;
-    object-fit: contain;
-    display: block;
-}
+      .logo {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         text-decoration: none;
+         color: #fff;
+         font-size: 1.8rem;
+         font-weight: 800;
+         letter-spacing: 1px;
+      }
 
-.logo span {
-    line-height: 1;
-    color: darkred;
-}
+      .logo img {
+         width: 46px;
+         height: 46px;
+         object-fit: contain;
+         display: block;
+      }
+
+      .logo span {
+         line-height: 1;
+         color: darkred;
+      }
+
       .logo i {
          font-size: 1.9rem;
          animation: flameFlicker 2.4s ease-in-out infinite;
@@ -686,12 +738,35 @@
          text-transform: uppercase;
       }
 
-      .status-pending { background: rgba(245, 158, 11, 0.15); color: #d97706; }
-      .status-confirmed { background: rgba(59, 130, 246, 0.15); color: #2563eb; }
-      .status-processing { background: rgba(168, 85, 247, 0.15); color: #7c3aed; }
-      .status-out_for_delivery { background: rgba(201, 154, 60, 0.2); color: #a5720c; }
-      .status-completed { background: rgba(16, 185, 129, 0.15); color: #059669; }
-      .status-cancelled { background: rgba(239, 68, 68, 0.15); color: #dc2626; }
+      .status-pending {
+         background: rgba(245, 158, 11, 0.15);
+         color: #d97706;
+      }
+
+      .status-confirmed {
+         background: rgba(59, 130, 246, 0.15);
+         color: #2563eb;
+      }
+
+      .status-processing {
+         background: rgba(168, 85, 247, 0.15);
+         color: #7c3aed;
+      }
+
+      .status-out_for_delivery {
+         background: rgba(201, 154, 60, 0.2);
+         color: #a5720c;
+      }
+
+      .status-completed {
+         background: rgba(16, 185, 129, 0.15);
+         color: #059669;
+      }
+
+      .status-cancelled {
+         background: rgba(239, 68, 68, 0.15);
+         color: #dc2626;
+      }
 
       /* HERO */
       .hero {
@@ -2481,32 +2556,41 @@
 </head>
 
 <body>
+   <audio id="messageSound" preload="auto">
+      <source src="message.mp3" type="audio/mpeg">
+   </audio>
 
+   <audio id="notificationSound" preload="auto">
+      <source src="notification.mp3" type="audio/mpeg">
+   </audio>
    <!-- LOGO LOADING SCREEN -->
-  <div id="loadingScreen">
-    <div class="loader-inner">
-        <div class="loader-badge">
+   <div id="loadingScreen">
+      <div class="loader-inner">
+         <div class="loader-badge">
             <div class="loader-ring"></div>
             <div class="loader-ring ring-2"></div>
 
             <!-- Logo -->
             <div class="loader-logo">
-                <img src="logos.png" alt="FYRO Logo">
+               <img src="logos.png" alt="FYRO Logo">
             </div>
-        </div>
+         </div>
 
-        <div class="loader-wordmark">FYRO</div>
-        <div class="loader-tagline">Fire Safety Since 1989</div>
+         <div class="loader-wordmark">FYRO</div>
+         <div class="loader-tagline">Fire Safety Since 1989</div>
 
-        <div class="loader-progress-track">
+         <div class="loader-progress-track">
             <div class="loader-progress-fill" id="loaderProgressFill"></div>
-        </div>
-    </div>
-</div>
+         </div>
+      </div>
+   </div>
 
-   <!-- CHAT BUTTON (LEFT SIDE) -->
    <button class="chat-button" onclick="openChatModal()" title="Chat with us">
+
       <i class="fas fa-comments"></i>
+
+      <span id="messageBadge" class="chat-badge">0</span>
+
    </button>
 
    <!-- ANNOUNCEMENT BAR -->
@@ -2517,13 +2601,13 @@
 
    <!-- NAVBAR -->
    <nav>
-    <div class="navbar-container">
-        <a href="#" class="logo">
+      <div class="navbar-container">
+         <a href="#" class="logo">
             <img src="logos.png" alt="FYRO Logo">
             <span>FYRO</span>
-        </a>
+         </a>
 
-        <ul class="nav-menu">
+         <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#pricelist">Price List</a></li>
@@ -2538,13 +2622,13 @@
                   <span class="nav-badge" id="notifBadge">0</span>
                </button>
             </li>
-        </ul>
+         </ul>
 
-        <button class="mobile-menu-toggle" onclick="toggleMenu()">
+         <button class="mobile-menu-toggle" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+         </button>
+      </div>
+   </nav>
 
    <!-- NOTIFICATIONS PANEL -->
    <div class="notif-panel" id="notifPanel">
@@ -2552,7 +2636,9 @@
          <h3>Notifications</h3>
          <button onclick="clearAllNotifications()">Clear all</button>
       </div>
-      <div id="notifList"><div class="notif-empty">No notifications yet.</div></div>
+      <div id="notifList">
+         <div class="notif-empty">No notifications yet.</div>
+      </div>
    </div>
 
    <!-- HERO -->
@@ -2723,8 +2809,6 @@
                <tr>
                   <th>Type & Specification</th>
                   <th>Size</th>
-                  <th>Refill Service</th>
-                  <th>Brand New Unit</th>
                </tr>
             </thead>
             <tbody>
@@ -2735,8 +2819,7 @@
                            extinguisher</span></span>
                   </td>
                   <td>10 LBS</td>
-                  <td><span class="price-refill">₱1,000</span></td>
-                  <td><span class="price-new">₱2,300</span></td>
+   
                </tr>
                <tr class="price-row">
                   <td>
@@ -2745,8 +2828,7 @@
                            equipment</span></span>
                   </td>
                   <td>10 LBS</td>
-                  <td><span class="price-refill">₱4,200</span></td>
-                  <td><span class="price-new">₱6,150</span></td>
+            
                </tr>
                <tr class="price-row">
                   <td>
@@ -2755,8 +2837,7 @@
                            equipment</span></span>
                   </td>
                   <td>5 LBS</td>
-                  <td><span class="price-refill">₱2,800</span></td>
-                  <td><span class="price-new">₱4,500</span></td>
+                
                </tr>
             </tbody>
          </table>
@@ -2939,39 +3020,39 @@
 
    <!-- AUTHORIZED SALES REPRESENTATIVE -->
    <!-- CONTACT BANNER -->
-<section class="company-banner-section" id="contact">
-    <div class="company-banner reveal">
+   <section class="company-banner-section" id="contact">
+      <div class="company-banner reveal">
 
-        <div class="banner-logo">
+         <div class="banner-logo">
             <img src="logos.png" alt="FYRO Logo">
-        </div>
+         </div>
 
-        <div class="banner-info">
+         <div class="banner-info">
             <h2>FYRO FIRE EXTINGUISHER TRADING</h2>
 
             <p>Purok Santol, Maranding, Lala, Lanao Del Norte</p>
 
             <p>
-                Contact No:
-                <strong>0977-601-6503</strong> /
-                <strong>0918-366-7925</strong>
+               Contact No:
+               <strong>0977-601-6503</strong> /
+               <strong>0918-366-7925</strong>
             </p>
 
             <p>Email: rolandenoy35@gmail.com</p>
 
             <div class="made">
-                MADE IN THE PHILIPPINES
+               MADE IN THE PHILIPPINES
             </div>
-        </div>
+         </div>
 
-        <div class="banner-bps">
+         <div class="banner-bps">
             <img src="bps-logo.png" alt="BPS Logo">
             <span>CERTIFIED<br>Product Quality</span>
             <span class="badge">BPS</span>
-        </div>
+         </div>
 
-    </div>
-</section>
+      </div>
+   </section>
 
    <!-- NEWSLETTER -->
    <section class="newsletter-section">
@@ -3122,11 +3203,16 @@
          <span class="close" onclick="closeChatModal()">&times;</span>
          <h2>Chat with FYRO</h2>
          <div style="display:flex;gap:0.5rem;margin-bottom:0.75rem;flex-wrap:wrap;">
-            <button type="button" class="chat-mode-btn active" data-mode="chat" onclick="setChatMode('chat', this)">Normal Message</button>
-            <button type="button" class="chat-mode-btn" data-mode="inquiry" onclick="setChatMode('inquiry', this)">Send Inquiry</button>
-            <button type="button" class="chat-mode-btn" data-mode="order_tracking" onclick="setChatMode('order_tracking', this)">Track Order</button>
+            <button type="button" class="chat-mode-btn active" data-mode="chat"
+               onclick="setChatMode('chat', this)">Normal Message</button>
+            <button type="button" class="chat-mode-btn" data-mode="inquiry" onclick="setChatMode('inquiry', this)">Send
+               Inquiry</button>
+            <button type="button" class="chat-mode-btn" data-mode="order_tracking"
+               onclick="setChatMode('order_tracking', this)">Track Order</button>
          </div>
-         <div id="chatModeBanner" style="margin-bottom:0.85rem;padding:0.75rem 1rem;border-radius:0.75rem;background:rgba(196,30,58,0.08);color:var(--ink);font-weight:700;">Normal Message</div>
+         <div id="chatModeBanner"
+            style="margin-bottom:0.85rem;padding:0.75rem 1rem;border-radius:0.75rem;background:rgba(196,30,58,0.08);color:var(--ink);font-weight:700;">
+            Normal Message</div>
          <div
             style="background:#f5f5f5;border-radius:6px;padding:1rem;margin-bottom:1rem;height:250px;overflow-y:auto;border:1px solid var(--line);"
             id="chatBox">
@@ -3226,32 +3312,32 @@ Once we receive your details, our team will verify your order and reach out to y
          localStorage.setItem(getAutoResponseCooldownKey(), Date.now().toString());
       }
       const notificationChannel = supabaseClient
-.channel("customer_notifications")
-.on(
-    "postgres_changes",
-    {
-        event: "INSERT",
-        schema: "public",
-        table: "chat_messages"
-    },
-    payload => {
+         .channel("customer_notifications")
+         .on(
+            "postgres_changes",
+            {
+               event: "INSERT",
+               schema: "public",
+               table: "chat_messages"
+            },
+            payload => {
 
-        const msg = payload.new;
+               const msg = payload.new;
 
-        if (
-            msg.session_id !== CHAT_SESSION_ID ||
-            msg.sender !== "admin"
-        ) return;
+               if (
+                  msg.session_id !== CHAT_SESSION_ID ||
+                  msg.sender !== "admin"
+               ) return;
 
-        // Reload chat
-        loadChatHistory(msg.visitor_name || "chat");
+               // Reload chat
+               loadChatHistory(msg.visitor_name || "chat");
 
-        // Notification
-        showOrderNotification(msg.message, msg.visitor_name);
+               // Notification
+               showOrderNotification(msg.message, msg.visitor_name);
 
-    }
-)
-.subscribe();
+            }
+         )
+         .subscribe();
 
       /* ============================================================
          NOTIFICATIONS — a per-visitor local notification log, fed by
@@ -3272,43 +3358,54 @@ Once we receive your details, our team will verify your order and reach out to y
       function saveNotifications(list) {
          localStorage.setItem(NOTIF_KEY, JSON.stringify(list.slice(0, 50)));
       }
-function addNotification({
-   type,
-   icon,
-   text,
-   orderId = null,
-   orderNumber = null,
-   sessionId = CHAT_SESSION_ID,
-   createdAt = new Date().toISOString()
-}) {
+      function addNotification({
+         type,
+         icon,
+         text,
+         orderId = null,
+         orderNumber = null,
+         sessionId = CHAT_SESSION_ID,
+         createdAt = new Date().toISOString()
+      }) {
 
-   const list = getNotifications();
+         const list = getNotifications();
 
-   const exists = list.some(n =>
-      n.type === type &&
-      n.orderId === orderId &&
-      n.text === text
-   );
+         const exists = list.some(n =>
+            n.type === type &&
+            n.orderId === orderId &&
+            n.text === text
+         );
 
-   if (exists) return;
+         if (exists) return;
 
-   list.unshift({
-      id: crypto.randomUUID(),
-      type,
-      icon,
-      text,
-      orderId,
-      orderNumber,
-      sessionId,
-      createdAt,
-      read: false
-   });
+         list.unshift({
+            id: crypto.randomUUID(),
+            type,
+            icon,
+            text,
+            orderId,
+            orderNumber,
+            sessionId,
+            createdAt,
+            read: false
+         });
 
-   saveNotifications(list);
+         saveNotifications(list);
 
-   renderNotifications();
+         if (type === "chat") {
 
-}
+            playMessageSound();
+
+         } else {
+
+            playNotificationSound();
+
+         }
+
+         renderNotifications();
+
+         updateMessageBadge();
+      }
 
       function updateNotifBadge() {
          const unread = getNotifications().filter(n => !n.read).length;
@@ -3318,28 +3415,28 @@ function addNotification({
          badge.classList.toggle('show', unread > 0);
       }
 
-   function renderNotifications() {
+      function renderNotifications() {
 
-   const list = getNotifications();
+         const list = getNotifications();
 
-   const listEl = document.getElementById("notifList");
+         const listEl = document.getElementById("notifList");
 
-   if (!listEl) return;
+         if (!listEl) return;
 
-   if (!list.length) {
+         if (!list.length) {
 
-      listEl.innerHTML =
-      `<div class="notif-empty">
+            listEl.innerHTML =
+               `<div class="notif-empty">
          No notifications yet.
       </div>`;
 
-      updateNotifBadge();
+            updateNotifBadge();
 
-      return;
+            return;
 
-   }
+         }
 
-   listEl.innerHTML = list.map(n => `
+         listEl.innerHTML = list.map(n => `
 
       <div class="notif-item ${n.read ? "" : "unread"}"
            onclick="openNotification('${n.id}')">
@@ -3362,93 +3459,93 @@ function addNotification({
 
    `).join("");
 
-   updateNotifBadge();
+         updateNotifBadge();
 
-}
-async function openNotification(id){
+      }
+      async function openNotification(id) {
 
-    const notifications = getNotifications();
+         const notifications = getNotifications();
 
-    const notif = notifications.find(x=>x.id===id);
+         const notif = notifications.find(x => x.id === id);
 
-    if(!notif) return;
+         if (!notif) return;
 
-    notif.read=true;
+         notif.read = true;
 
-    saveNotifications(notifications);
+         saveNotifications(notifications);
 
-    renderNotifications();
+         renderNotifications();
 
-    document
-        .getElementById("notifPanel")
-        .classList.remove("show");
+         document
+            .getElementById("notifPanel")
+            .classList.remove("show");
 
-    if(notif.type==="chat"){
+         if (notif.type === "chat") {
 
-        openChatModal("chat");
+            openChatModal("chat");
 
-        await loadChatHistory("chat");
+            await loadChatHistory("chat");
 
-        setTimeout(()=>{
+            setTimeout(() => {
 
-            const box=document.getElementById("chatBox");
+               const box = document.getElementById("chatBox");
 
-            box.scrollTop=box.scrollHeight;
+               box.scrollTop = box.scrollHeight;
 
-        },300);
+            }, 300);
 
-        return;
+            return;
 
-    }
+         }
 
-    if(notif.type==="order"){
+         if (notif.type === "order") {
 
-        await openMyOrdersModal();
+            await openMyOrdersModal();
 
-        if(notif.orderId){
+            if (notif.orderId) {
 
-            highlightOrder(notif.orderId);
-
-        }
-
-    }
-
-}
-function highlightOrder(orderId){
-
-    setTimeout(()=>{
-
-        const cards=document.querySelectorAll(".my-order-card");
-
-        cards.forEach(card=>{
-
-            if(card.dataset.id===orderId){
-
-                card.scrollIntoView({
-
-                    behavior:"smooth",
-
-                    block:"center"
-
-                });
-
-                card.style.transition="0.3s";
-
-                card.style.boxShadow="0 0 0 3px #c41e3a";
-
-                setTimeout(()=>{
-
-                    card.style.boxShadow="";
-
-                },2500);
+               highlightOrder(notif.orderId);
 
             }
 
-        });
+         }
 
-    },400);
+      }
+      function highlightOrder(orderId) {
 
-}
+         setTimeout(() => {
+
+            const cards = document.querySelectorAll(".my-order-card");
+
+            cards.forEach(card => {
+
+               if (card.dataset.id === orderId) {
+
+                  card.scrollIntoView({
+
+                     behavior: "smooth",
+
+                     block: "center"
+
+                  });
+
+                  card.style.transition = "0.3s";
+
+                  card.style.boxShadow = "0 0 0 3px #c41e3a";
+
+                  setTimeout(() => {
+
+                     card.style.boxShadow = "";
+
+                  }, 2500);
+
+               }
+
+            });
+
+         }, 400);
+
+      }
       function toggleNotifPanel(event) {
          if (event) event.stopPropagation();
          const panel = document.getElementById('notifPanel');
@@ -3519,7 +3616,7 @@ function highlightOrder(orderId){
                   <span class="status-pill status-${order.status}">${STATUS_LABELS[order.status] || order.status}</span>
                </div>
                <div style="font-size:0.85rem;color:var(--steel);">
-                  ${order.order_type === 'refill' ? 'Refill Service' : 'Brand New Purchase'} · ₱${Number(order.product_price).toLocaleString()} · Placed ${new Date(order.created_at).toLocaleDateString()}
+                  ${order.order_type === 'refill' ? 'Refill Service' : 'Brand New Purchase'} · Placed ${new Date(order.created_at).toLocaleDateString()}
                </div>
                ${order.tracking_message ? `<div class="my-order-msg">${order.tracking_message}</div>` : ''}
             </div>
@@ -3551,21 +3648,21 @@ function highlightOrder(orderId){
             }, (payload) => {
                const order = payload.new;
                const label = STATUS_LABELS[order.status] || order.status;
-              addNotification({
+               addNotification({
 
-    type:"order",
+                  type: "order",
 
-    icon:"fa-box",
+                  icon: "fa-box",
 
-    orderId:order.id,
+                  orderId: order.id,
 
-    orderNumber:order.order_number,
+                  orderNumber: order.order_number,
 
-    text:`Order #${order.order_number}
+                  text: `Order #${order.order_number}
           status changed to
           <strong>${label}</strong>.`
 
-});
+               });
 
                const myOrdersModal = document.getElementById('myOrdersModal');
                if (myOrdersModal && myOrdersModal.style.display === 'block') {
@@ -3584,13 +3681,13 @@ function highlightOrder(orderId){
                const modeLabel = CHAT_MODE_LABELS[payload.new.visitor_name] || 'Chat';
                addNotification({
 
-    type:"chat",
+                  type: "chat",
 
-    icon:"fa-comment-dots",
+                  icon: "fa-comment-dots",
 
-    text:`New reply from FYRO Support.`
+                  text: `New reply from FYRO Support.`
 
-});
+               });
             })
             .subscribe();
       }
@@ -3675,7 +3772,47 @@ function highlightOrder(orderId){
             }, 180);
          });
       }
+      function playMessageSound() {
 
+         const audio = document.getElementById("messageSound");
+
+         if (!audio) return;
+
+         audio.currentTime = 0;
+
+         audio.play().catch(() => { });
+
+      }
+
+      function playNotificationSound() {
+
+         const audio = document.getElementById("notificationSound");
+
+         if (!audio) return;
+
+         audio.currentTime = 0;
+
+         audio.play().catch(() => { });
+
+      }
+
+      function updateMessageBadge() {
+
+         const badge = document.getElementById("messageBadge");
+
+         if (!badge) return;
+
+         const unread = getNotifications().filter(n =>
+
+            !n.read && n.type === "chat"
+
+         ).length;
+
+         badge.textContent = unread > 9 ? "9+" : unread;
+
+         badge.classList.toggle("show", unread > 0);
+
+      }
       function openCheckoutModal(product) {
          currentProduct = product;
          const modal = document.getElementById('checkoutModal');
@@ -3683,11 +3820,6 @@ function highlightOrder(orderId){
          let summary = `
             <div class="order-item">
                <span><strong>${product.name}</strong></span>
-               <span>₱${product.price.toLocaleString()}</span>
-            </div>
-            <div class="order-total">
-               <span>Total Amount:</span>
-               <span>₱${product.price.toLocaleString()}</span>
             </div>
          `;
 
@@ -3801,55 +3933,55 @@ function highlightOrder(orderId){
          }
       }
 
-         async function handleCheckout(event) {
-            event.preventDefault();
+      async function handleCheckout(event) {
+         event.preventDefault();
 
-            const submitBtn = document.getElementById('checkoutSubmitBtn');
-            const errorEl = document.getElementById('checkoutError');
-            errorEl.textContent = '';
+         const submitBtn = document.getElementById('checkoutSubmitBtn');
+         const errorEl = document.getElementById('checkoutError');
+         errorEl.textContent = '';
 
-            const name = document.getElementById('checkoutName').value.trim();
-            const email = document.getElementById('checkoutEmail').value.trim();
-            const phone = document.getElementById('checkoutPhone').value.trim();
-            const address = document.getElementById('checkoutAddress').value.trim();
-            const city = document.getElementById('checkoutCity').value.trim();
-            const notes = document.getElementById('checkoutNotes').value.trim();
-            const orderType = document.getElementById('orderType').value;
+         const name = document.getElementById('checkoutName').value.trim();
+         const email = document.getElementById('checkoutEmail').value.trim();
+         const phone = document.getElementById('checkoutPhone').value.trim();
+         const address = document.getElementById('checkoutAddress').value.trim();
+         const city = document.getElementById('checkoutCity').value.trim();
+         const notes = document.getElementById('checkoutNotes').value.trim();
+         const orderType = document.getElementById('orderType').value;
 
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Placing order…';
+         submitBtn.disabled = true;
+         submitBtn.textContent = 'Placing order…';
 
-            const { data, error } = await supabaseClient
-               .from('orders')
-               .insert({
-                  product_name: currentProduct.name,
-                  product_price: currentProduct.price,
-                  order_type: orderType,
-                  customer_name: name,
-                  email: email,
-                  phone: phone,
-                  address: address,
-                  city: city,
-                  notes: notes || null,
-                  session_id: CHAT_SESSION_ID
-               })
-               .select()
-               .single();
+         const { data, error } = await supabaseClient
+            .from('orders')
+            .insert({
+               product_name: currentProduct.name,
+               product_price: currentProduct.price,
+               order_type: orderType,
+               customer_name: name,
+               email: email,
+               phone: phone,
+               address: address,
+               city: city,
+               notes: notes || null,
+               session_id: CHAT_SESSION_ID
+            })
+            .select()
+            .single();
 
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Confirm Order';
+         submitBtn.disabled = false;
+         submitBtn.textContent = 'Confirm Order';
 
-            if (error) {
-               console.error('Order insert failed:', error);
-               errorEl.textContent = 'Something went wrong sending your order. Please try again or call us directly.';
-               return;
-            }
+         if (error) {
+            console.error('Order insert failed:', error);
+            errorEl.textContent = 'Something went wrong sending your order. Please try again or call us directly.';
+            return;
+         }
 
-            closeCheckoutModal();
+         closeCheckoutModal();
 
-            const typeLabel = orderType === 'refill' ? 'Refill Service' : 'Purchase';
-            const confirmBody = document.getElementById('orderConfirmBody');
-            confirmBody.innerHTML = `
+         const typeLabel = orderType === 'refill' ? 'Refill Service' : 'Purchase';
+         const confirmBody = document.getElementById('orderConfirmBody');
+         confirmBody.innerHTML = `
                <div class="order-item"><span>Order #</span><span>${data.order_number}</span></div>
                <div class="order-item"><span>Item</span><span>${currentProduct.name}</span></div>
                <div class="order-item"><span>Order Type</span><span>${typeLabel}</span></div>
@@ -3858,42 +3990,41 @@ function highlightOrder(orderId){
                <div class="order-item"><span>Email</span><span>${email}</span></div>
                <div class="order-item"><span>Delivery Address</span><span>${address}, ${city}</span></div>
                ${notes ? `<div class="order-item"><span>Notes</span><span>${notes}</span></div>` : ''}
-               <div class="order-total"><span>Total Amount:</span><span>₱${currentProduct.price.toLocaleString()}</span></div>
             `;
-            document.getElementById('orderConfirmModal').style.display = 'block';
+         document.getElementById('orderConfirmModal').style.display = 'block';
 
-          addNotification({
+         addNotification({
 
-    type:"order",
+            type: "order",
 
-    icon:"fa-box",
+            icon: "fa-box",
 
-    orderId:data.id,
+            orderId: data.id,
 
-    orderNumber:data.order_number,
+            orderNumber: data.order_number,
 
-    text:`Your order #${data.order_number}
+            text: `Your order #${data.order_number}
           has been placed and is now
           <strong>Pending</strong>.`
 
-});
-         }
+         });
+      }
 
-         /* PRODUCT FUNCTIONS */
-         function renderProducts() {
-            const grid = document.getElementById('productsGrid');
-            grid.innerHTML = '';
-            const filtered = currentFilter === 'all' ? products : products.filter(p => p.category === currentFilter);
-            filtered.forEach(product => {
-               const btnText = product.type === 'refill' ? 'Refill Now' : 'Buy Now';
-               const specsHtml = product.specs ? `
+      /* PRODUCT FUNCTIONS */
+      function renderProducts() {
+         const grid = document.getElementById('productsGrid');
+         grid.innerHTML = '';
+         const filtered = currentFilter === 'all' ? products : products.filter(p => p.category === currentFilter);
+         filtered.forEach(product => {
+            const btnText = product.type === 'refill' ? 'Refill Now' : 'Buy Now';
+            const specsHtml = product.specs ? `
                   <div class="product-specs">
                      <ul>
                         ${product.specs.map(spec => `<li><i class="fas fa-dot-circle"></i> ${spec}</li>`).join('')}
                      </ul>
                   </div>
                ` : '';
-               grid.innerHTML += `
+            grid.innerHTML += `
                   <div class="product-card reveal in">
                      <div class="product-image">
                         <img src="${product.image}" alt="${product.name}">
@@ -3910,8 +4041,8 @@ function highlightOrder(orderId){
                      </div>
                   </div>
                `;
-            });
-         }
+         });
+      }
 
       function handleBuyOrRefill(productId) {
          const product = products.find(p => p.id === productId);
@@ -4050,105 +4181,105 @@ function highlightOrder(orderId){
             .subscribe();
       }
 
-      
-     async function sendChatMessage() {
 
-    const input = document.getElementById("chatInput");
-    const message = input.value.trim();
+      async function sendChatMessage() {
 
-    if (!message) return;
+         const input = document.getElementById("chatInput");
+         const message = input.value.trim();
 
-    input.value = "";
+         if (!message) return;
 
-    const optimisticRow = {
-        sender: "visitor",
-        message,
-        visitor_name: chatMode
-    };
+         input.value = "";
 
-    renderChatMessage(optimisticRow);
+         const optimisticRow = {
+            sender: "visitor",
+            message,
+            visitor_name: chatMode
+         };
 
-    try {
+         renderChatMessage(optimisticRow);
 
-        // Save chat message
-        const { error: chatError } = await supabaseClient
-            .from("chat_messages")
-            .insert([
-                {
-                    session_id: CHAT_SESSION_ID,
-                    sender: "visitor",
-                    message: message,
-                    visitor_name: chatMode
-                }
-            ]);
+         try {
 
-        if (chatError) {
-            throw chatError;
-        }
+            // Save chat message
+            const { error: chatError } = await supabaseClient
+               .from("chat_messages")
+               .insert([
+                  {
+                     session_id: CHAT_SESSION_ID,
+                     sender: "visitor",
+                     message: message,
+                     visitor_name: chatMode
+                  }
+               ]);
 
-        // Save inquiry
-        const { error: inquiryError } = await supabaseClient
-            .from("inquiries")
-            .insert([
-                {
-                    session_id: CHAT_SESSION_ID,
-                    name: null,
-                    email: null,
-                    phone: null,
-                    message: message,
-                    source: chatMode === 'order_tracking' ? 'order_tracking' : 'chat'
-                }
-            ]);
+            if (chatError) {
+               throw chatError;
+            }
 
-        if (inquiryError) {
-            throw inquiryError;
-        }
+            // Save inquiry
+            const { error: inquiryError } = await supabaseClient
+               .from("inquiries")
+               .insert([
+                  {
+                     session_id: CHAT_SESSION_ID,
+                     name: null,
+                     email: null,
+                     phone: null,
+                     message: message,
+                     source: chatMode === 'order_tracking' ? 'order_tracking' : 'chat'
+                  }
+               ]);
 
-        const autoReply = CHAT_AUTORESPONSE[chatMode];
+            if (inquiryError) {
+               throw inquiryError;
+            }
 
-        if (autoReply && shouldSendAutoResponse()) {
+            const autoReply = CHAT_AUTORESPONSE[chatMode];
 
-            const { error: autoError } = await supabaseClient
-                .from("chat_messages")
-                .insert([
-                    {
+            if (autoReply && shouldSendAutoResponse()) {
+
+               const { error: autoError } = await supabaseClient
+                  .from("chat_messages")
+                  .insert([
+                     {
                         session_id: CHAT_SESSION_ID,
                         sender: "admin",
                         message: autoReply,
                         visitor_name: chatMode
-                    }
-                ]);
+                     }
+                  ]);
 
-            if (!autoError) {
-                markAutoResponseSent();
-            } else {
-                console.error(autoError);
+               if (!autoError) {
+                  markAutoResponseSent();
+               } else {
+                  console.error(autoError);
+               }
             }
-        }
 
-    } catch (err) {
+         } catch (err) {
 
-        console.error("Chat Error:", err);
+            console.error("Chat Error:", err);
 
-        const chatBox = document.getElementById("chatBox");
+            const chatBox = document.getElementById("chatBox");
 
-        const errDiv = document.createElement("div");
+            const errDiv = document.createElement("div");
 
-        errDiv.style.cssText = `
+            errDiv.style.cssText = `
             text-align:center;
             color:#d32f2f;
             font-size:13px;
             margin:10px 0;
         `;
 
-        errDiv.textContent =
-            err.message || "Failed to send message.";
+            errDiv.textContent =
+               err.message || "Failed to send message.";
 
-        chatBox.appendChild(errDiv);
+            chatBox.appendChild(errDiv);
 
-    }
+         }
 
-}
+      }
 
       /* ============================================================
          NEWSLETTER -> Supabase "newsletter_subscribers" table
